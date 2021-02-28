@@ -1,0 +1,1080 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+    <title>Not A Number</title>
+    <!--link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"-->
+    <!-- <link href="https://raw.githubusercontent.com/sindresorhus/github-markdown-css/main/github-markdown.css" rel="stylesheet"> -->
+    
+<link rel="stylesheet" href="/css/style.css">
+<link rel="stylesheet" href="/css/github-markdown.css">
+
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+<body>
+    <div class="sidebar">
+    <div class="sidebar-sticky">
+        <!--img src="/images/logo@2x.png" style="width:127px;"-->
+        <a href="https://nxy006.github.io"><h1>Not A Number</h1></a>
+        <p class="lead">
+            求知若渴
+        </p>
+    </div>
+    <div class="sidebar-footer">
+        <!-- <iframe 
+            frameborder="0"
+            border="1"
+            marginwidth="0"
+            marginheight="0"            
+            width=280
+            height=100
+            src="//music.163.com/outchain/player?type=2&id=464916877&auto=true&height=60">
+        </iframe> -->
+        <div class="sidebar-background">Background: <a href="https://pixabay.com/zh/photos/snow-ice-winter-cold-snowy-nature-5852352" target="_blank">雪 冰 冬天</a></div>
+        <div class="sidebar-licenses">Licenses: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC 4.0</a>
+            <span class="cc-license-icons">
+                <span id="cc-logo" class="icon"><img width="15px" alt="cc logo" src="https://creativecommons.org/images/deed/cc_icon_white_x2.png"></span>
+                <span id="cc-attribution" class="icon"><img width="15px" src="https://creativecommons.org/images/deed/attribution_icon_white_x2.png"></span>
+                <span id="cc-icon-nc" class="icon"><img width="15px" src="https://creativecommons.org/images/deed/nc_white_x2.png"></span>
+                <span id="cc-icon-sa" class="icon"><img width="15px" src="https://creativecommons.org/images/deed/sa_white_x2.png"></span>
+            </span>
+        </div>
+        <hr/>
+        <div>©2021. All rights reserved.</div>
+        <div>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>, custom theme</div>
+    </div>
+</div>
+    <div class="content">
+        <!--%- partial('_partial/header') %-->
+        
+
+<div class="article">
+    <div class="title"><a href="/2021/02/01/february-leetCoding-challenge-2021/">February LeetCoding Challenge 2021 解题报告</a></div>
+    <div class="time">创建时间：2021-02-01 / 更新时间：2021-02-28</div>
+    <div class="article-toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Overview"><span class="toc-text">Overview</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Number-of-1-Bits"><span class="toc-text">1. Number of 1 Bits</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Trim-a-Binary-Search-Tree"><span class="toc-text">2. Trim a Binary Search Tree</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Linked-List-Cycle"><span class="toc-text">3. Linked List Cycle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Longest-Harmonious-Subsequence"><span class="toc-text">4. Longest Harmonious Subsequence</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Simplify-Path"><span class="toc-text">5. Simplify Path</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Binary-Tree-Right-Side-View"><span class="toc-text">6. Binary Tree Right Side View</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Shortest-Distance-to-a-Character"><span class="toc-text">7. Shortest Distance to a Character</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Peeking-Iterator"><span class="toc-text">8. Peeking Iterator</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-Convert-BST-to-Greater-Tree"><span class="toc-text">9. Convert BST to Greater Tree</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-Copy-List-with-Random-Pointer"><span class="toc-text">10. Copy List with Random Pointer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-Valid-Anagram"><span class="toc-text">11. Valid Anagram</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-Number-of-Steps-to-Reduce-a-Number-to-Zero"><span class="toc-text">12. Number of Steps to Reduce a Number to Zero</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-Shortest-Path-in-Binary-Matrix"><span class="toc-text">13. Shortest Path in Binary Matrix</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-Is-Graph-Bipartite"><span class="toc-text">14. Is Graph Bipartite?</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-The-K-Weakest-Rows-in-a-Matrix"><span class="toc-text">15. The K Weakest Rows in a Matrix</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-Letter-Case-Permutation"><span class="toc-text">16. Letter Case Permutation</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-Container-With-Most-Water"><span class="toc-text">17. Container With Most Water</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-Arithmetic-Slices"><span class="toc-text">18. Arithmetic Slices</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-Minimum-Remove-to-Make-Valid-Parentheses"><span class="toc-text">19. Minimum Remove to Make Valid Parentheses</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-Roman-to-Integer"><span class="toc-text">20. Roman to Integer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21-Broken-Calculator"><span class="toc-text">21. Broken Calculator</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-Longest-Word-in-Dictionary-through-Deleting"><span class="toc-text">22. Longest Word in Dictionary through Deleting</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-Search-a-2D-Matrix-II"><span class="toc-text">23. Search a 2D Matrix II</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24-Score-of-Parentheses"><span class="toc-text">24. Score of Parentheses</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25-Shortest-Unsorted-Continuous-Subarray"><span class="toc-text">25. Shortest Unsorted Continuous Subarray</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#26-Validate-Stack-Sequences"><span class="toc-text">26. Validate Stack Sequences</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#27-Divide-Two-Integers"><span class="toc-text">27. Divide Two Integers</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#28-Maximum-Frequency-Stack"><span class="toc-text">28. Maximum Frequency Stack</span></a></li></ol>
+    </div>
+    <div class="article-content markdown-body">
+        <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/explore/challenge/card/february-leetcoding-challenge-2021/">February LeetCoding Challenge 2021</a></p>
+<p><strong>Week 1: February 1st - February 7th</strong></p>
+<ol>
+<li>Squirrel Simulation <code>Premium</code></li>
+<li><a href="#1-Number-of-1-Bits">Number of 1 Bits</a></li>
+<li><a href="#2-Trim-a-Binary-Search-Tree">Trim a Binary Search Tree</a></li>
+<li><a href="#3-Linked-List-Cycle">Linked List Cycle</a></li>
+<li><a href="#4-Longest-Harmonious-Subsequence">Longest Harmonious Subsequence</a></li>
+<li><a href="#5-Simplify-Path">Simplify Path</a></li>
+<li><a href="#6-Binary-Tree-Right-Side-View">Binary Tree Right Side View</a></li>
+<li><a href="#7-Shortest-Distance-to-a-Character">Shortest Distance to a Character</a></li>
+</ol>
+<p><strong>Week 2: February 8th - February 14th</strong></p>
+<ol>
+<li>Number of Distinct Islands <code>Premium</code></li>
+<li><a href="#8-Peeking-Iterator">Peeking Iterator</a></li>
+<li><a href="#9-Convert-BST-to-Greater-Tree">Convert BST to Greater Tree</a></li>
+<li><a href="#10-Copy-List-with-Random-Pointer">Copy List with Random Pointer</a></li>
+<li><a href="#11-Valid-Anagram">Valid Anagram</a></li>
+<li><a href="#12-Number-of-Steps-to-Reduce-a-Number-to-Zero">Number of Steps to Reduce a Number to Zero</a></li>
+<li><a href="#13-Shortest-Path-in-Binary-Matrix">Shortest Path in Binary Matrix</a></li>
+<li><a href="#14-Is-Graph-Bipartite">Is Graph Bipartite?</a></li>
+</ol>
+<p><strong>Week 3: February 15th - February 21st</strong></p>
+<ol>
+<li>Kill Process <code>Premium</code></li>
+<li><a href="#15-The-K-Weakest-Rows-in-a-Matrix">The K Weakest Rows in a Matrix</a></li>
+<li><a href="#16-Letter-Case-Permutation">Letter Case Permutation</a></li>
+<li><a href="#17-Container-With-Most-Water">Container With Most Water</a></li>
+<li><a href="#18-Arithmetic-Slices">Arithmetic Slices</a></li>
+<li><a href="#19-Minimum-Remove-to-Make-Valid-Parentheses">Minimum Remove to Make Valid Parentheses</a></li>
+<li><a href="#20-Roman-to-Integer">Roman to Integer</a></li>
+<li><a href="#21-Broken-Calculator">Broken Calculator</a></li>
+</ol>
+<p><strong>Week 4: February 22nd - February 28th</strong></p>
+<ol>
+<li>Find the Celebrity <code>Premium</code></li>
+<li><a href="#22-Longest-Word-in-Dictionary-through-Deleting">Longest Word in Dictionary through Deleting</a></li>
+<li><a href="#23-Search-a-2D-Matrix-II">Search a 2D Matrix II</a></li>
+<li><a href="#24-Score-of-Parentheses">Score of Parentheses</a></li>
+<li><a href="#25-Shortest-Unsorted-Continuous-Subarray">Shortest Unsorted Continuous Subarray</a></li>
+<li><a href="#26-Validate-Stack-Sequences">Validate Stack Sequences</a></li>
+<li><a href="#27-Divide-Two-Integers">Divide Two Integers</a></li>
+<li><a href="#28-Maximum-Frequency-Stack">Maximum Frequency Stack</a></li>
+</ol>
+<br/>
+
+<h2 id="1-Number-of-1-Bits"><a href="#1-Number-of-1-Bits" class="headerlink" title="1. Number of 1 Bits"></a>1. Number of 1 Bits</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/number-of-1-bits/">191. Number of 1 Bits</a> <code>Easy</code></p>
+<p><strong>题目简述：</strong></p>
+<p>计算一个无符号整数的二进制表示包含多少个 <code>1</code> ，注意 java 不支持无符号整数因此可能传入负数。</p>
+<p><strong>题目解答：</strong></p>
+<p>常规解法，逐位判断（传入负数时，要转换为补码）。</p>
+<pre><code class="java">public class Solution &#123;
+    // you need to treat n as an unsigned value
+    public int hammingWeight(int n) &#123;
+        int cnt = n &lt; 0 ? 1 : 0;
+        if (n &lt; 0) &#123;
+            n = Integer.MAX_VALUE + n + 1;
+        &#125;
+        while(n != 0) &#123;
+            if ((n&amp;1) == 1) cnt++;
+            n &gt;&gt;= 1;
+        &#125;
+        return cnt;
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="2-Trim-a-Binary-Search-Tree"><a href="#2-Trim-a-Binary-Search-Tree" class="headerlink" title="2. Trim a Binary Search Tree"></a>2. Trim a Binary Search Tree</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/trim-a-binary-search-tree/">669. Trim a Binary Search Tree</a> <code>Medium</code></p>
+<p><strong>题目简述：</strong></p>
+<p>处理一个二叉搜索树，将在给定取值范围外的节点移除，但注意剩余节点的相对位置不能改变。</p>
+<p><strong>题目解答：</strong></p>
+<p>为符合取值范围的节点查找其子节点即可，递归实现。</p>
+<pre><code class="java">/**
+ * Definition for a binary tree node.
+ * public class TreeNode &#123;
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() &#123;&#125;
+ *     TreeNode(int val) &#123; this.val = val; &#125;
+ *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     &#125;
+ * &#125;
+ */
+class Solution &#123;
+    public TreeNode trimBST(TreeNode root, int low, int high) &#123;
+        if (root == null) return null;
+        if (low &lt;= root.val &amp;&amp; root.val &lt;= high) &#123;
+            root.left = trimBST(root.left, low, high);
+            root.right = trimBST(root.right, low, high);
+            return root;
+        &#125; else if (root.val &lt; low) &#123;
+            return trimBST(root.right, low, high);
+        &#125; else &#123;
+            return trimBST(root.left, low, high);
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="3-Linked-List-Cycle"><a href="#3-Linked-List-Cycle" class="headerlink" title="3. Linked List Cycle"></a>3. Linked List Cycle</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/linked-list-cycle/">141. Linked List Cycle</a> <code>Easy</code></p>
+<p><strong>题目简述：</strong></p>
+<p>经典题目，判断一个链表内是否存在循环。</p>
+<p><strong>题目解答：</strong></p>
+<p>常规解法一般是记录已访问的节点列表（或标记这些节点的 <code>val</code> 为特殊值），如果重复访问即说明存在循环。一种空间复杂度 O(1) 解法是，双指针以不同的速度扫描，如果遇到同一节点则说明存在循环。</p>
+<pre><code class="java">/**
+ * Definition for singly-linked list.
+ * class ListNode &#123;
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) &#123;
+ *         val = x;
+ *         next = null;
+ *     &#125;
+ * &#125;
+ */
+public class Solution &#123;
+    public boolean hasCycle(ListNode head) &#123;
+        if (head == null) return false;
+        
+        ListNode l = head, r = head.next;
+        while(l != null &amp;&amp; r != null) &#123;
+            if (l == r) return true;
+            l = l.next;
+            r = r.next;
+            if (r != null) r = r.next;
+        &#125;
+        return false;
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="4-Longest-Harmonious-Subsequence"><a href="#4-Longest-Harmonious-Subsequence" class="headerlink" title="4. Longest Harmonious Subsequence"></a>4. Longest Harmonious Subsequence</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/longest-harmonious-subsequence/">594. Longest Harmonious Subsequence594. Longest Harmonious Subsequence</a> <code>Easy</code></p>
+<p><strong>题目简述：</strong></p>
+<p>定义最大最小值的差值恰好为 1 的序列为和谐（<em>harmonious</em>）序列，给出字符串，求最长和谐子序列长度，子序列不要求连续。</p>
+<p><strong>题目解答：</strong></p>
+<p>本题实际与顺序无关，排序后直接找值为 n 与 n+1 且均不为零，的最大计数之和。</p>
+<pre><code class="java">class Solution &#123;
+    public int findLHS(int[] nums) &#123;
+        Arrays.sort(nums);
+        int n = nums[0], prev = 0, cnt = 0, max = 0;
+        for(int num : nums) &#123;
+            if (num == n) &#123;
+                cnt++;
+            &#125; else if (num == n+1) &#123;
+                prev = cnt;
+                n = num;
+                cnt = 1;
+            &#125; else &#123;
+                prev = 0;
+                n = num;
+                cnt = 1;
+            &#125;
+            
+            if (prev != 0 &amp;&amp; cnt + prev &gt; max) &#123;
+                max = cnt + prev;
+            &#125;
+        &#125;
+        return max;
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="5-Simplify-Path"><a href="#5-Simplify-Path" class="headerlink" title="5. Simplify Path"></a>5. Simplify Path</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/simplify-path/">71. Simplify Path</a> <code>Medium</code></p>
+<p><strong>题目简述：</strong></p>
+<p>将输入路径，改为绝对路径： <code>/</code> 开头，目录吉间用单个 <code>/</code> 分隔，除目录外不以 <code>/</code> 结尾，且不含 <code>.</code> 或<code>..</code> 目录</p>
+<p><strong>题目解答：</strong></p>
+<p>使用栈，以将相对路径转换为绝对路径。（ <code>.</code> 表示当前目录，<code>..</code> 表示上一层目录 ）</p>
+<pre><code class="java">class Solution &#123;
+    public String simplifyPath(String path) &#123;
+        Stack&lt;String&gt; stack = new Stack&lt;&gt;();
+        path += &quot;/&quot;;
+        
+        int prev = -1;
+        for(int i = 0; i &lt; path.length(); i++) &#123;
+            if (path.charAt(i) == &#39;/&#39;) &#123;
+                if (prev != -1) &#123;
+                    String s = path.substring(prev+1, i);
+                    if (&quot;..&quot;.equals(s)) &#123;
+                        if (!stack.empty()) stack.pop();
+                    &#125; else if (!&quot;.&quot;.equals(s) &amp;&amp; !&quot;&quot;.equals(s)) &#123;
+                        stack.push(s);
+                    &#125;   
+                &#125;
+                prev = i;
+            &#125;
+        &#125;
+        
+        StringBuilder sb = new StringBuilder();
+        while(!stack.empty()) &#123;
+            String s = stack.pop();
+            sb.insert(0, &quot;/&quot; + s);
+            
+        &#125;
+        return sb.length() == 0 ? &quot;/&quot; : sb.toString();
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="6-Binary-Tree-Right-Side-View"><a href="#6-Binary-Tree-Right-Side-View" class="headerlink" title="6. Binary Tree Right Side View"></a>6. Binary Tree Right Side View</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/binary-tree-right-side-view/">199. Binary Tree Right Side View</a> <code>Medium</code></p>
+<p><strong>题目简述：</strong></p>
+<p>给定二叉树，求在二叉树右侧所看到的一列值，即求二叉树每层最右侧值的组成的列表</p>
+<p><strong>题目解答：</strong></p>
+<p>最直接的做法是层序遍历，但写起来比较麻烦，需要判断当前在哪一层，因此直接用递归写了个解法。</p>
+<pre><code class="java">/**
+ * Definition for a binary tree node.
+ * public class TreeNode &#123;
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() &#123;&#125;
+ *     TreeNode(int val) &#123; this.val = val; &#125;
+ *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     &#125;
+ * &#125;
+ */
+class Solution &#123;
+    
+    private List&lt;Integer&gt; ret = new ArrayList&lt;&gt;();
+
+    public List&lt;Integer&gt; rightSideView(TreeNode root) &#123;
+        process(root, 0);
+        return ret;
+    &#125;
+    
+    private void process(TreeNode node, int layer) &#123;
+        if (node == null) return;
+        if (ret.size() &lt;= layer) ret.add(node.val);
+        else ret.set(layer, node.val);
+        
+        process(node.left, layer+1);
+        process(node.right, layer+1);
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="7-Shortest-Distance-to-a-Character"><a href="#7-Shortest-Distance-to-a-Character" class="headerlink" title="7. Shortest Distance to a Character"></a>7. Shortest Distance to a Character</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/shortest-distance-to-a-character/">821. Shortest Distance to a Character</a> <code>Easy</code></p>
+<p><strong>题目简述：</strong></p>
+<p>给定字符串和其中的一个字符，求字符串内每个位置与该字符的最短距离</p>
+<p><strong>题目解答：</strong></p>
+<p>找到该字符的每个位置，推算其周围的距离。</p>
+<blockquote>
+<p>注：这里将 ret[i] 初始化为 -1 可以优化为 <code>Integer.MAX_VALUE</code> 以免去 <code>ret[i] == -1</code> 的判断</p>
+</blockquote>
+<pre><code class="java">class Solution &#123;
+    public int[] shortestToChar(String s, char c) &#123;
+        int[] ret = new int[s.length()];
+        for(int i = 0; i &lt; s.length(); i++) &#123;
+            ret[i] = -1;
+        &#125;
+        
+        for(int i = 0; i &lt; s.length(); i++) &#123;
+            if (s.charAt(i) == c) &#123;
+                checkDistance(s, i, c, ret);
+            &#125;
+        &#125;
+        return ret;
+    &#125;
+    
+    public void checkDistance(String s, int i, char c, int[] ret) &#123;
+        ret[i] = 0;
+        boolean lFin = false, rFin = false;
+        for(int l = i-1, r = i+1; !lFin || !rFin; l--,r++) &#123;
+            if (!lFin)  &#123;
+                if (l &lt; 0 || s.charAt(l) == c) &#123;
+                    lFin = true;
+                &#125;
+                if (!lFin &amp;&amp; (ret[l] == -1 || ret[l] &gt; i-l)) &#123;
+                    ret[l] = i-l;
+                &#125; else &#123;
+                    lFin = true;
+                &#125;
+            &#125;
+            if (!rFin) &#123;
+                if (r &gt;= s.length() || s.charAt(r) == c) &#123;
+                    rFin = true;
+                &#125;
+                if (!rFin &amp;&amp; (ret[r] == -1 || ret[r] &gt; r-i)) &#123;
+                    ret[r] = r-i;
+                &#125; else &#123;
+                    rFin = true;
+                &#125;
+            &#125;
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="8-Peeking-Iterator"><a href="#8-Peeking-Iterator" class="headerlink" title="8. Peeking Iterator"></a>8. Peeking Iterator</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/peeking-iterator/">284. Peeking Iterator</a> <code>Medium</code></p>
+<p><strong>题目简述：</strong></p>
+<p>给定一个 Iterator 对象，要求基于该对象包装，实现 peek() 方法，返回下一个元素，但不移动位置。</p>
+<p><strong>题目解答：</strong></p>
+<p>基于已有的 <code>next()</code> 和 <code>hasNext()</code> 显然不提供此功能，因此 peek 时实际上必然要发生移动，需要记录此时发生了 <code>peek</code> 操作，和当前 <code>peek</code> 的值用于后续操作。</p>
+<pre><code class="java">// Java Iterator interface reference:
+// https://docs.oracle.com/javase/8/docs/api/java/util/Iterator.html
+
+class PeekingIterator implements Iterator&lt;Integer&gt; &#123;
+    private Iterator&lt;Integer&gt; iterator;
+    private Integer current = -1;
+    private boolean isPeek = false;
+    
+    public PeekingIterator(Iterator&lt;Integer&gt; iterator) &#123;
+        this.iterator = iterator;
+        
+    &#125;
+    
+    // Returns the next element in the iteration without advancing the iterator.
+    public Integer peek() &#123;
+        if (isPeek) return current;
+        else &#123;
+            isPeek = true;
+            return current = iterator.next();
+        &#125;
+    &#125;
+    
+    // hasNext() and next() should behave the same as in the Iterator interface.
+    // Override them if needed.
+    @Override
+    public Integer next() &#123;
+        if (isPeek) &#123;
+            isPeek = false;
+            return current;
+        &#125;
+        else return iterator.next();
+    &#125;
+    
+    @Override
+    public boolean hasNext() &#123;
+        return iterator.hasNext() || isPeek;
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="9-Convert-BST-to-Greater-Tree"><a href="#9-Convert-BST-to-Greater-Tree" class="headerlink" title="9. Convert BST to Greater Tree"></a>9. Convert BST to Greater Tree</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/convert-bst-to-greater-tree/">538. Convert BST to Greater Tree</a> <code>Medium</code></p>
+<p><strong>题目简述：</strong></p>
+<p>给定二叉搜索树，为每个节点的值增加大于该节点值的节点值之和。</p>
+<p><strong>题目解答：</strong></p>
+<p>基于二叉搜索树的特点，实际上每个节点值就是按照后续遍历时的累加和。</p>
+<pre><code class="java">/**
+ * Definition for a binary tree node.
+ * public class TreeNode &#123;
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() &#123;&#125;
+ *     TreeNode(int val) &#123; this.val = val; &#125;
+ *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     &#125;
+ * &#125;
+ */
+class Solution &#123;
+    private int sum = 0;
+    public TreeNode convertBST(TreeNode root) &#123;
+        if (root == null) return null;
+        
+        convertBST(root.right);
+        sum += root.val;
+        root.val = sum;
+        convertBST(root.left);
+        return root;
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="10-Copy-List-with-Random-Pointer"><a href="#10-Copy-List-with-Random-Pointer" class="headerlink" title="10. Copy List with Random Pointer"></a>10. Copy List with Random Pointer</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/copy-list-with-random-pointer/">138. Copy List with Random Pointer</a> <code>Medium</code></p>
+<p><strong>题目简述：</strong></p>
+<p>给出一个列表，next 值指向下一节点，random 值指向某一结点，要求深拷贝该列表。（注意原链表不能修改，且新链表必须均为全新节点）</p>
+<p><strong>题目解答：</strong></p>
+<p>这道题的主要问题是新旧节点的映射关系问题，一个旧节点必须对应唯一的新节点。上次做这道题直接用 Map 记录了映射关系，本次则采用了在链表内增加元素的方式（A –&gt; A’ –&gt; B –&gt; B’ –&gt; C –&gt; C’ –&gt; D –&gt; D’，带 <code>&#39;</code> 的为新节点），以节约空间占用，旧节点的下一位置即新节点。</p>
+<blockquote>
+<p>最终需要拆分为两个链表，注意原链表的位置关系也需要修复</p>
+</blockquote>
+<pre><code class="java">/*
+// Definition for a Node.
+class Node &#123;
+    int val;
+    Node next;
+    Node random;
+
+    public Node(int val) &#123;
+        this.val = val;
+        this.next = null;
+        this.random = null;
+    &#125;
+&#125;
+*/
+
+class Solution &#123;
+    public Node copyRandomList(Node head) &#123;
+        if (head == null) return null;
+        
+        Node node = head;
+        while(node != null) &#123;
+            Node nextNode = node.next;
+            node.next = new Node(node.val);
+            node.next.next = nextNode;
+            node = nextNode;
+        &#125;
+        
+        node = head;
+        while(node != null) &#123;
+            node.next.random = node.random == null ? null : node.random.next;
+            node = node.next.next;
+        &#125;
+        
+        node = head;
+        Node ret = head.next;
+        while(node != null) &#123;
+            Node nextNode = node.next;
+            node.next = node.next == null ? null : node.next.next;
+            node = nextNode;
+        &#125;
+        return ret;
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="11-Valid-Anagram"><a href="#11-Valid-Anagram" class="headerlink" title="11. Valid Anagram"></a>11. Valid Anagram</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/valid-anagram/">242. Valid Anagram</a> <code>Easy</code></p>
+<p><strong>题目简述：</strong></p>
+<p>验证给出的两个字符串是否为有效的字谜（即字符仅允许顺序不同）</p>
+<p><strong>题目解答：</strong></p>
+<p>这里直接重排序判断，还可以用类似计数排序（<code>char[26]</code>）的方式比较。</p>
+<pre><code class="java">class Solution &#123;
+    public boolean isAnagram(String s, String t) &#123;
+        char[] a = s.toCharArray(), b = t.toCharArray();
+        Arrays.sort(a);
+        Arrays.sort(b);
+        return Arrays.equals(a, b);
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="12-Number-of-Steps-to-Reduce-a-Number-to-Zero"><a href="#12-Number-of-Steps-to-Reduce-a-Number-to-Zero" class="headerlink" title="12. Number of Steps to Reduce a Number to Zero"></a>12. Number of Steps to Reduce a Number to Zero</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/number-of-steps-to-reduce-a-number-to-zero/">1342. Number of Steps to Reduce a Number to Zero</a>  <code>Easy</code></p>
+<p><strong>题目简述：</strong></p>
+<p>给出一个整数，按 “偶数时除二，奇数时减一” 的规则，求多少次运算后值变为 0</p>
+<p><strong>题目解答：</strong></p>
+<p>根据递推公式，写个递归</p>
+<pre><code class="java">class Solution &#123;
+    public int numberOfSteps (int num) &#123;
+        int cnt = 0;
+        while(num != 0) &#123;
+            num = num % 2 == 0 ? num/2 : num-1;
+            cnt++;
+        &#125;
+        return cnt;
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="13-Shortest-Path-in-Binary-Matrix"><a href="#13-Shortest-Path-in-Binary-Matrix" class="headerlink" title="13. Shortest Path in Binary Matrix"></a>13. Shortest Path in Binary Matrix</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/shortest-path-in-binary-matrix/">1091. Shortest Path in Binary Matrix</a> <code>Medium</code></p>
+<p><strong>题目简述：</strong></p>
+<p>给出一个正方形数组，0 代表可以通过，1 代表道路不通，求从左上角到右下角的最少需要经过的格子数，每次行动可移动到周围八个格子内。</p>
+<p><strong>题目解答：</strong></p>
+<p>宽度优先搜索，结合优先队列。如果找到了已知节点的更优解则重新计算相关节点。</p>
+<pre><code class="java">class Solution &#123;
+    private int[][] gotos = new int[][]&#123;&#123;-1, -1&#125;,&#123;0, -1&#125;,&#123;1,-1&#125;,&#123;-1, 0&#125;,&#123;-1,1&#125;,&#123;0,1&#125;,&#123;1,0&#125;,&#123;1,1&#125;&#125;;
+    public int shortestPathBinaryMatrix(int[][] grid) &#123;
+        int N = grid.length;
+        int[][] shortestPaths = new int[N][N];
+        for(int i = 0; i &lt; N; i++) &#123;
+            for(int j = 0; j &lt; N; j++) &#123;
+                shortestPaths[i][j] = Integer.MAX_VALUE;
+            &#125;
+        &#125;
+
+        Queue&lt;int[]&gt; queue = new PriorityQueue&lt;&gt;((arr1, arr2) -&gt; arr1[2] - arr2[2]);
+        if (grid[0][0] == 0) &#123;
+            queue.offer(new int[]&#123;0,0,1&#125;);
+        &#125;
+        while(!queue.isEmpty()) &#123;
+            int[] arr = queue.poll();
+            if (arr[2] &gt;= shortestPaths[arr[0]][arr[1]]) &#123;
+                continue;
+            &#125;
+            shortestPaths[arr[0]][arr[1]] = arr[2];
+            if (arr[0] == N-1 &amp;&amp; arr[1] == N-1) &#123;
+                return arr[2];
+            &#125;
+            for(int i = 0; i &lt; gotos.length; i++) &#123;
+                int nextX = arr[0] + gotos[i][0], nextY = arr[1] + gotos[i][1];
+                if (nextX &lt; 0 || nextX &gt;= N || nextY &lt; 0 || nextY &gt;= N || grid[nextX][nextY] == 1) &#123;
+                    continue;
+                &#125;
+                queue.offer(new int[]&#123;nextX, nextY, arr[2]+1&#125;);
+            &#125;
+        &#125;
+        return -1;
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+
+<h2 id="14-Is-Graph-Bipartite"><a href="#14-Is-Graph-Bipartite" class="headerlink" title="14. Is Graph Bipartite?"></a>14. Is Graph Bipartite?</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/is-graph-bipartite/">785. Is Graph Bipartite?</a> <code>Medium</code></p>
+<p><strong>题目简述：</strong></p>
+<p>给出一个图形，判断该图形的节点是否可以分为两个集合，使得任意一条边的端点都分别位于两个集合内。（不保证所有点都连接，不保证图形连续）</p>
+<p><strong>题目解答：</strong></p>
+<p>假设节点 A 位于集合 1，则节点 A 连接的节点必位于集合 2，持续判断（宽度优先搜索，这里使用递归）直到发现冲突。注意，每个符合条件的节点都需检查。</p>
+<pre><code class="java">class Solution &#123;
+    private int[] arr;
+    
+    public boolean isBipartite(int[][] graph) &#123;
+        arr = new int[graph.length];
+        for(int i = 0; i &lt; graph.length; i++) &#123;
+            arr[i] = -1;
+        &#125;
+        
+        for(int i = 0; i &lt; graph.length; i++) &#123;
+            if (graph[i].length != 0 &amp;&amp; arr[i] == -1 &amp;&amp; !check(graph, i, 1)) &#123;
+                return false;
+            &#125;
+        &#125;
+        return true;
+    &#125;
+    
+    private boolean check(int[][] graph, int i, int group) &#123;
+        if (arr[i] == -1) &#123;
+            arr[i] = group;
+        &#125; else &#123;
+            return arr[i] == group;
+        &#125;
+        
+        int nextGroup = group == 1 ? 2 : 1;
+        for(int j = 0; j &lt; graph[i].length; j++) &#123;
+            if (!check(graph, graph[i][j], nextGroup)) &#123;
+                return false;
+            &#125;
+        &#125;
+        return true;
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="15-The-K-Weakest-Rows-in-a-Matrix"><a href="#15-The-K-Weakest-Rows-in-a-Matrix" class="headerlink" title="15. The K Weakest Rows in a Matrix"></a>15. The K Weakest Rows in a Matrix</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/">1337. The K Weakest Rows in a Matrix</a> <code>Easy</code></p>
+<p><strong>题目简述：</strong></p>
+<p>给出一个由 0、1 构成的二维矩阵，要求按照 1 的数量从小到大排序每行，数量相等时按原始行号（0 起始）顺序排序，求排序后前 k 行的行号。</p>
+<p><strong>题目解答：</strong></p>
+<p>自定义排序即可</p>
+<pre><code class="java">class Solution &#123;
+    public int[] kWeakestRows(int[][] mat, int k) &#123;
+        List&lt;Pair&lt;Integer, Integer&gt;&gt; list = new ArrayList&lt;&gt;();
+        for(int i = 0; i &lt; mat.length; i++) &#123;
+            int cnt = 0;
+            for(int j = 0; j &lt; mat[i].length; j++) &#123;
+                cnt += mat[i][j];
+            &#125;
+            list.add(new Pair(cnt, i));
+        &#125;
+
+        Collections.sort(list, new Comparator&lt;Pair&lt;Integer, Integer&gt;&gt;() &#123;
+            @Override
+            public int compare(Pair&lt;Integer, Integer&gt; a, Pair&lt;Integer, Integer&gt; b) &#123;
+                return a.getKey() != b.getKey() ? a.getKey()-b.getKey() : a.getValue() - b.getValue();
+            &#125;
+        &#125;);
+        
+        int i = 0;
+        int[] ret = new int[k];
+        for(Pair&lt;Integer, Integer&gt; p : list) &#123;
+            ret[i++] = p.getValue();
+            if (i &gt;= k) return ret;
+        &#125;
+        return ret;
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="16-Letter-Case-Permutation"><a href="#16-Letter-Case-Permutation" class="headerlink" title="16. Letter Case Permutation"></a>16. Letter Case Permutation</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/letter-case-permutation/">784. Letter Case Permutation</a> <code>Medium</code></p>
+<p><strong>题目简述：</strong></p>
+<p>给出原始字符串，其中的英文字母可转换为大写或小写字母，求所有可能生成的字符串。（不要求返回值顺序）</p>
+<p><strong>题目解答：</strong></p>
+<p>递归遍历每个位置的所有可能值</p>
+<pre><code class="java">class Solution &#123;
+    public List&lt;String&gt; letterCasePermutation(String S) &#123;
+        List&lt;String&gt; list = new ArrayList&lt;&gt;();
+        process(S.toLowerCase(), 0, list, new StringBuilder());
+        return list;
+    &#125;
+    
+    private void process(String s, int i, List&lt;String&gt; list, StringBuilder sb) &#123;
+        if (sb.length() == s.length()) &#123;
+            list.add(sb.toString());
+            return ;
+        &#125;
+        char c = s.charAt(i);
+        char[] arr = new char[2];
+        int l = 1;
+        
+        arr[0] = c;
+        if (&#39;a&#39; &lt;= c &amp;&amp; c &lt;= &#39;z&#39;) &#123;
+            arr[l++] = (char) ((int)c-32);
+        &#125;
+        for(int j = 0; j &lt; l; j++) &#123;
+            sb.append(arr[j]);
+            process(s, i+1, list, sb);
+            sb.delete(sb.length()-1, sb.length());
+        &#125;
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="17-Container-With-Most-Water"><a href="#17-Container-With-Most-Water" class="headerlink" title="17. Container With Most Water"></a>17. Container With Most Water</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/container-with-most-water/">11. Container With Most Water</a> ``</p>
+<p><strong>题目简述：</strong></p>
+<p>给出 n 个非负整数，代表相互距离为 1 的垂直边高度。找到最合适的两个边，使之与 x 轴所形成的容器能够承载最多的水。</p>
+<p><strong>题目解答：</strong></p>
+<p>双指针扫描，任意两条边所能承载的水量为 最小垂直高度 * 距离。本题将指针分别位于最左和最右端，使之距离最长，然后逐步尝试提高最小高度，以谋求最优解。</p>
+<pre><code class="java">class Solution &#123;
+    public int maxArea(int[] height) &#123;
+        int l = 0, r = height.length - 1, ret = 0;
+        while(l &lt; r) &#123;
+            int w = r-l, h = Math.min(height[l], height[r]);
+            if (w*h &gt; ret) &#123;
+                ret = w*h;
+            &#125;
+            
+            if (height[l] == h) &#123;
+                while(l &lt; r &amp;&amp; height[l] &lt;= h) &#123;
+                    l++;
+                &#125;
+            &#125;
+            if (height[r] == h) &#123;
+                while(l &lt; r &amp;&amp; height[r] &lt;= h) &#123;
+                    r--;
+                &#125;
+            &#125;
+        &#125;
+        return ret;
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="18-Arithmetic-Slices"><a href="#18-Arithmetic-Slices" class="headerlink" title="18. Arithmetic Slices"></a>18. Arithmetic Slices</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/arithmetic-slices/">413. Arithmetic Slices</a> <code>Medium</code></p>
+<p><strong>题目简述：</strong></p>
+<p>（待补充）</p>
+<p><strong>题目解答：</strong></p>
+<p>（待补充）</p>
+<pre><code class="java">class Solution &#123;
+    public int numberOfArithmeticSlices(int[] A) &#123;
+        int[] dp = new int[A.length];
+        int sum = 0;
+        for (int i = 2; i &lt; dp.length; i++) &#123;
+            if (A[i] - A[i-1] == A[i-1] - A[i-2]) &#123;
+                dp[i] = dp[i-1] + 1;
+                sum += dp[i];
+            &#125;
+        &#125;
+        return sum;
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="19-Minimum-Remove-to-Make-Valid-Parentheses"><a href="#19-Minimum-Remove-to-Make-Valid-Parentheses" class="headerlink" title="19. Minimum Remove to Make Valid Parentheses"></a>19. Minimum Remove to Make Valid Parentheses</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/">1249. Minimum Remove to Make Valid Parentheses</a> <code>Medium</code></p>
+<p><strong>题目简述：</strong></p>
+<p>给出小写字母与括号构成的字符串，要求从中移除最少数量的字符，以生成有效的括号表达式，即括号成对的字符串。（返回任一种有效表达式即可）</p>
+<p><strong>题目解答：</strong></p>
+<p>直观的做法是对左括号建立栈，此处用 <code>list</code> 模拟栈，寻找到多余的括号后则移除相关符号。</p>
+<pre><code class="java">class Solution &#123;
+    public String minRemoveToMakeValid(String s) &#123;
+        List&lt;Integer&gt; list = new ArrayList&lt;&gt;();
+        int cnt = 0;
+        StringBuilder sb = new StringBuilder();
+        for(char c : s.toCharArray()) &#123;
+            if (c == &#39;(&#39;) &#123;
+                cnt++;
+                sb.append(c);
+                list.add(sb.length()-1);
+            &#125; else if (c == &#39;)&#39;) &#123;
+                if (cnt &gt; 0) &#123;
+                    cnt--;
+                    list.remove(list.size()-1);
+                    sb.append(c);
+                &#125;
+            &#125; else &#123;
+                sb.append(c);
+            &#125;
+        &#125;
+        
+        if (cnt != 0) &#123;
+            for(int i = list.size()-1; i &gt;= 0; i--) &#123;
+                sb.delete(list.get(i), list.get(i)+1);
+            &#125;
+        &#125;
+        return sb.toString();
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+
+<h2 id="20-Roman-to-Integer"><a href="#20-Roman-to-Integer" class="headerlink" title="20. Roman to Integer"></a>20. Roman to Integer</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/roman-to-integer/">13. Roman to Integer</a> <code>Easy   </code></p>
+<p><strong>题目简述：</strong></p>
+<p>将罗马数字字符串转换为数字。（字符串范围：<code>I</code>, <code>V</code>, <code>X</code>, <code>L</code>, <code>C</code>, <code>D</code>, <code>M</code>）</p>
+<p><strong>题目解答：</strong></p>
+<p>遍历各个字符即可，注意某些组合时，需要将两个字符放在一起运算。</p>
+<pre><code class="java">class Solution &#123;
+    public int romanToInt(String s) &#123;
+        int ret = 0;
+        for(int i = 0; i &lt; s.length(); i++) &#123;
+            if (i+1 &lt; s.length() &amp;&amp; match(s.charAt(i), s.charAt(i+1))) &#123;
+                ret += romanToInt(s.charAt(i+1)) - romanToInt(s.charAt(i));
+                i++;
+            &#125; else &#123;
+                ret += romanToInt(s.charAt(i));
+            &#125;
+        &#125;
+        return ret;
+    &#125;
+    
+    private int romanToInt(char c) &#123;
+        switch(c) &#123;
+            case &#39;I&#39;: return 1;
+            case &#39;V&#39;: return 5;
+            case &#39;X&#39;: return 10;
+            case &#39;L&#39;: return 50;
+            case &#39;C&#39;: return 100;
+            case &#39;D&#39;: return 500;
+            case &#39;M&#39;: return 1000;
+            default: return 0;
+        &#125;
+    &#125;
+    
+    private boolean match(char a, char b) &#123;
+        return (a == &#39;I&#39; &amp;&amp; (b == &#39;V&#39; || b == &#39;X&#39;)) || 
+            (a == &#39;X&#39; &amp;&amp; (b == &#39;L&#39; || b == &#39;C&#39;)) || 
+            (a == &#39;C&#39; &amp;&amp; (b == &#39;D&#39; || b == &#39;M&#39;));
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="21-Broken-Calculator"><a href="#21-Broken-Calculator" class="headerlink" title="21. Broken Calculator"></a>21. Broken Calculator</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/broken-calculator/">991. Broken Calculator</a> <code>Medium</code></p>
+<p><strong>题目简述：</strong></p>
+<p>给出数字 X，Y，每次可以对 X 执行 “乘二” 或 “减一” 操作，求最少多少次操作后 X 可以变为 Y。</p>
+<p><strong>题目解答：</strong></p>
+<p>当 X 比 Y 大时，必然需要执行 X-Y 次减一操作，反之，X 的操作可以转换为 Y 的反方向操作。</p>
+<p><em>说明；根据规则，X 通过一定操作能得到 Y 则 Y 一定能反向得到 X。此时，如果 Y 是偶数，则说明上一步 X 做了乘二操作，同理奇数为减一操作</em></p>
+<pre><code class="java">class Solution &#123;
+    public int brokenCalc(int X, int Y) &#123;
+        int cnt = 0;
+        while (X &lt; Y) &#123;
+            cnt++;
+            if (Y % 2 == 1) &#123;
+                Y++;
+            &#125; else &#123;
+                Y /= 2;
+            &#125;
+        &#125;
+        return X-Y+cnt;
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="22-Longest-Word-in-Dictionary-through-Deleting"><a href="#22-Longest-Word-in-Dictionary-through-Deleting" class="headerlink" title="22. Longest Word in Dictionary through Deleting"></a>22. Longest Word in Dictionary through Deleting</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/longest-word-in-dictionary-through-deleting/">524. Longest Word in Dictionary through Deleting</a> <code>Medium</code></p>
+<p><strong>题目简述：</strong></p>
+<p>给出字符串 <code>s</code> 和字典 <code>dictionary</code>，要求通过在字符串中删除任意字符，得到字典中的单词，返回最长的单词，相同长度时返回字典序最小的一个。</p>
+<p><strong>题目解答：</strong></p>
+<p>直接排序遍历解答。</p>
+<pre><code class="java">class Solution &#123;
+    public String findLongestWord(String s, List&lt;String&gt; d) &#123;
+        Collections.sort(d, (s1, s2) -&gt; s1.length()==s2.length() ? s1.compareTo(s2) : s2.length()-s1.length());
+        for(String dic : d) &#123;
+            if (isMatch(s, dic)) &#123;
+                return dic;
+            &#125;
+        &#125;
+        return &quot;&quot;;
+    &#125;
+    
+    private boolean isMatch(String s, String d) &#123;
+        int i = 0, j = 0;
+        while(i &lt; s.length() &amp;&amp; j &lt; d.length()) &#123;
+            if (s.charAt(i) == d.charAt(j)) &#123;
+                j++;
+            &#125;
+            i++;
+        &#125;
+        return j == d.length();
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="23-Search-a-2D-Matrix-II"><a href="#23-Search-a-2D-Matrix-II" class="headerlink" title="23. Search a 2D Matrix II"></a>23. Search a 2D Matrix II</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/search-a-2d-matrix-ii/">240. Search a 2D Matrix II</a> <code>Medium</code></p>
+<p><strong>题目简述：</strong></p>
+<p>给出二维矩阵，每行自左到右递增，每列自上到下递增。求矩阵内是否有某个值 <code>target</code>。</p>
+<p><strong>题目解答：</strong></p>
+<p>经典题目，从左下或右上开始查询即可。比如左下开始，小于目标值则右移，大于目标值则上移。</p>
+<pre><code class="java">class Solution &#123;
+    public boolean searchMatrix(int[][] matrix, int target) &#123;
+        int i = matrix.length-1, j = 0;
+        while(i &gt;= 0 &amp;&amp; j &lt; matrix[0].length) &#123;
+            if (matrix[i][j] == target) &#123;
+                return true;
+            &#125; else if (matrix[i][j] &gt; target) &#123;
+                i--;
+            &#125; else &#123;
+                j++;
+            &#125;
+        &#125;
+        return false;
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="24-Score-of-Parentheses"><a href="#24-Score-of-Parentheses" class="headerlink" title="24. Score of Parentheses"></a>24. Score of Parentheses</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/score-of-parentheses/">856. Score of Parentheses</a> <code>Medium</code></p>
+<p><strong>题目简述：</strong></p>
+<p>给出平衡的括号表达式（仅由 <code>(</code>，<code>)</code> 构成），计算其分值：</p>
+<ol>
+<li><code>()</code> 记一分</li>
+<li>A、B 均为平衡括号表达式，则 <code>AB</code> 分值等于 A，B 表达式的分值之和</li>
+<li>A 为平衡括号表达式，<code>(A)</code> 的分支等于 A 表达式的分值乘以二</li>
+</ol>
+<p><strong>题目解答：</strong></p>
+<p>按规则逐步递归计分即可</p>
+<pre><code class="java">class Solution &#123;
+    public int scoreOfParentheses(String S) &#123;
+        if (&quot;&quot;.equals(S)) return 0;
+        if (&quot;()&quot;.equals(S)) return 1;
+        
+        int l = -1, cnt = 0, ret = 0;
+        for(int i = 0; i &lt; S.length(); i++) &#123;
+            if (S.charAt(i) == &#39;(&#39;) &#123;
+                cnt++;
+                if (l == -1) l = i;
+            &#125;
+            else &#123;
+                cnt--;
+            &#125;
+            
+            if (cnt == 0) &#123;
+                int score = scoreOfParentheses(S.substring(l+1, i));
+                ret += score == 0 ? 1 : score * 2;
+                l = -1;
+            &#125;
+        &#125;
+        return ret;
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="25-Shortest-Unsorted-Continuous-Subarray"><a href="#25-Shortest-Unsorted-Continuous-Subarray" class="headerlink" title="25. Shortest Unsorted Continuous Subarray"></a>25. Shortest Unsorted Continuous Subarray</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/shortest-unsorted-continuous-subarray/">581. Shortest Unsorted Continuous Subarray</a> <code>Medium</code></p>
+<p><strong>题目简述：</strong></p>
+<p>给出数组 <code>arr</code>，求最少需要对多长的连续子数组重排序，可以使整个数组有序？</p>
+<p><strong>题目解答：</strong></p>
+<p>这道题用了个野蛮的解法，直接排序后比对前后数组。</p>
+<pre><code class="java">class Solution &#123;
+    public int findUnsortedSubarray(int[] nums) &#123;
+        int[] arr = new int[nums.length];
+        for(int i = 0; i &lt; nums.length; i++) &#123;
+            arr[i] = nums[i];
+        &#125;
+        Arrays.sort(arr);
+        
+        int ret = nums.length;
+        for(int i = 0; i &lt; nums.length; i++) &#123;
+            if (arr[i] == nums[i]) &#123;
+                ret--;
+            &#125; else &#123;
+                break;
+            &#125;
+        &#125;
+        
+        for(int i = nums.length-1; i &gt;= 0; i--) &#123;
+            if (arr[i] == nums[i]) &#123;
+                ret--;
+            &#125; else &#123;
+                break;
+            &#125;
+        &#125;
+        return ret &lt; 0 ? 0 : ret;
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="26-Validate-Stack-Sequences"><a href="#26-Validate-Stack-Sequences" class="headerlink" title="26. Validate Stack Sequences"></a>26. Validate Stack Sequences</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/validate-stack-sequences/">946. Validate Stack Sequences</a> <code>Medium</code></p>
+<p><strong>题目简述：</strong></p>
+<p>给出入栈序列 <code>pushed</code> 与出栈序列 <code>popped</code>，判断对于一个空栈，是否可以通过出入栈实现此序列。（序列内所有值均唯一）</p>
+<p><strong>题目解答：</strong></p>
+<p>用一个栈尝试模拟解答即可</p>
+<pre><code class="java">class Solution &#123;
+    public boolean validateStackSequences(int[] pushed, int[] popped) &#123;
+        int n = pushed.length, i = 0, j = 0;
+        if (n == 0) return true;
+        
+        Stack&lt;Integer&gt; stack = new Stack&lt;&gt;();
+        stack.push(pushed[i++]);
+        while(!stack.empty() || i &lt; n) &#123;
+            // 如果栈顶符合，出栈
+            if (!stack.empty() &amp;&amp; stack.peek() == popped[j]) &#123;
+                stack.pop();
+                j++;
+            &#125; else &#123;
+                // 所有数据均已入栈，仍不符合
+                if (i &gt;= n) &#123;
+                    return false;
+                // 数据继续入栈
+                &#125; else &#123;
+                    stack.push(pushed[i++]);
+                &#125;
+            &#125;
+        &#125;
+        return true;
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="27-Divide-Two-Integers"><a href="#27-Divide-Two-Integers" class="headerlink" title="27. Divide Two Integers"></a>27. Divide Two Integers</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/divide-two-integers/">29. Divide Two Integers</a> <code>Medium</code></p>
+<p><strong>题目简述：</strong></p>
+<p>不适用乘、除、取余操作，给出被除数 <code>dividend</code> 和除数 <code>divisor</code>（两个数均可能为负数），求两个数相除的整数商。（返回 <code>[−2^31,  2^31 − 1]</code> 范围内的值，超过则返回范围内最接近的值）</p>
+<p><strong>题目解答：</strong></p>
+<p>不适用乘、除、取余，则只能用最朴素的加法运算。但如果每次只加一格速度过慢，这里每次翻倍以尽快接近目标值。（2 进制思想）</p>
+<pre><code class="java">class Solution &#123;
+    public int divide(int dividend, int divisor) &#123;
+        int flag = (dividend &gt; 0 &amp;&amp; divisor &lt; 0 || dividend &lt; 0 &amp;&amp; divisor &gt; 0) ? -1 : 1;
+        long ret = div(Math.abs((long) dividend), Math.abs((long) divisor));
+        
+        if (ret &gt; Integer.MAX_VALUE) return flag == 1 ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+        else return (int) ret * flag;
+    &#125;
+    
+    public long div(long dividend, long divisor) &#123;
+        if (divisor &gt; dividend) return 0;
+        
+        long mul = 1, sum = divisor;
+        while(sum + sum &lt; dividend) &#123;
+            sum += sum;
+            mul += mul;
+        &#125;
+        return mul + div(dividend - sum, divisor);
+    &#125;
+&#125;
+</code></pre>
+<br/>
+
+<h2 id="28-Maximum-Frequency-Stack"><a href="#28-Maximum-Frequency-Stack" class="headerlink" title="28. Maximum Frequency Stack"></a>28. Maximum Frequency Stack</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/maximum-frequency-stack/">895. Maximum Frequency Stack</a> <code>Hard</code></p>
+<p><strong>题目简述：</strong></p>
+<p>实现 <code>FreqStack</code>，以使得 <code>push(int x)</code> 方法向栈内增加一个值，<code>pop()</code> 移除并返回栈内出现次数最多的值，如果有个多个值满足，则返回最接近栈顶的值。</p>
+<p><strong>题目解答：</strong></p>
+<p>按照出现频次和位置排序各个值即可，这里用优先队列，自定义 <code>Comparator</code> 实现。</p>
+<pre><code class="java">class FreqStack &#123;
+    List&lt;Integer&gt; data = new LinkedList&lt;&gt;();
+    Map&lt;Integer, Integer&gt; cntMap = new HashMap&lt;&gt;();
+    Queue&lt;Pair&lt;Integer, Integer&gt;&gt; queue = new PriorityQueue(new Comparator&lt;Pair&lt;Integer, Integer&gt;&gt;() &#123; 
+        public int compare(Pair&lt;Integer, Integer&gt; a, Pair&lt;Integer, Integer&gt; b) 
+        &#123;
+            if (a.getKey().equals(b.getKey())) return b.getValue().compareTo(a.getValue());
+            else return b.getKey().compareTo(a.getKey());
+        &#125;
+    &#125;);
+
+    public FreqStack() &#123;
+        
+    &#125;
+    
+    public void push(int x) &#123;
+        int place = data.size();
+        data.add(x);
+        
+        Integer cnt = cntMap.getOrDefault(x, 0)+1;
+        cntMap.put(x, cnt);
+        queue.offer(new Pair&lt;Integer, Integer&gt;(cnt, place));
+    &#125;
+    
+    public int pop() &#123;
+        if (!queue.isEmpty()) &#123;
+            Pair&lt;Integer, Integer&gt; pair = queue.poll();
+            int x = data.get(pair.getValue());
+            cntMap.put(x, cntMap.get(x)-1);
+            return x;
+        &#125;
+        return -1;
+    &#125;
+&#125;
+
+/**
+ * Your FreqStack object will be instantiated and called as such:
+ * FreqStack obj = new FreqStack();
+ * obj.push(x);
+ * int param_2 = obj.pop();
+ */
+</code></pre>
+<br/>
+
+    </div>
+</div>
+
+    </div>
+    
+</body>
+</html>
