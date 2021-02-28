@@ -1,0 +1,26 @@
+<div class="posts">
+    <% page.posts.each(function(post, index){ %>
+        <!--%- partial('_partial/article', {index: true, post: post}) %-->
+        <div class="post">
+            <div class="title"><a href="<%- url_for(post.path) %>"><%= post.title %></a></div>
+            <div class="time"><%- date(post.date) %> <!-- / < date(post.updated) -->
+                <% if (post.tags && post.tags.length){ %>
+                    /
+                    <%- list_tags(post.tags, {
+                          show_count: false,
+                          class: 'articleTag',
+                          style: 'none',
+                          separator: '，'
+                    }) %>
+                <% } %>
+            </div>
+            <!-- <div class="excerpt"><%= post.excerpt %></div> -->
+        </div>
+    <% }) %>
+
+    <% if (page.current < page.total) { %>
+        <div class="pagination">
+            <a href="<%- url_for(page.next_link) %>">下一页</a>
+        </div>
+    <% } %>
+</div>

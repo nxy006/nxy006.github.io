@@ -1,0 +1,142 @@
+
+$main-color : #7897C3; //#ac4142;
+
+/** 侧边栏 **/
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    text-align: left;
+    // background-color: $main-color;
+    background-image: url(/images/sidebar.jpg);
+    padding: 20px 10px;
+    color: white;
+}
+
+// 侧边栏固定白色文字
+.sidebar a,
+.sidebar a:hover,
+.sidebar a:link,
+.sidebar a:visited {
+    color: white;
+}
+
+.sidebar-sticky {
+    position: absolute;
+    right: 20px;
+    top: 30px;
+    left: 20px; 
+}
+
+.sidebar-footer {
+    position: absolute;
+    right: 20px;
+    bottom: 30px;
+    left: 20px; 
+}
+
+.sidebar-background, .sidebar-licenses {
+    margin-bottom: 5px;
+}
+
+.content {
+    margin-left: 300px;
+}
+
+.header {
+    height: 50px;
+    background-color: green;
+    color: white;
+}
+
+/** 主页范围 **/
+.posts {
+    margin-left: 50px;
+    margin-top: 50px;
+}
+
+.post {
+    margin-bottom: 15px;
+}
+
+.post .title{
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.posts .post .title a {
+    color:$main-color;
+}
+
+.post .time{
+    color: #757575;
+}
+
+.post .excerpt{
+    margin-top: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+a:link, a:visited  {
+    color:$main-color;
+}
+
+.article {
+    margin-left: 50px;
+    margin-right: 350px;
+    margin-top: 50px;
+}
+
+.article {
+    min-width: 500px;
+    max-width: 1000px;
+    color: #000;
+}
+
+.article .title {
+    margin-bottom: 5px;
+}
+
+.article .title a {
+    font-size: 2rem;
+    color: #000;
+}
+
+.article-content {
+    margin-top: 50px;
+}
+
+.article-toc {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    min-width: 250px;
+    max-width: 450px;
+    color: white;
+    line-height: 1.5;
+    text-align: left;
+    border-radius: 15px;
+    border: 1px solid $main-color;
+}
+
+.article-toc .toc {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 1200px;
+}
+

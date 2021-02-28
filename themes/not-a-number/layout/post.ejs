@@ -1,0 +1,12 @@
+
+
+<div class="article">
+    <div class="title"><a href="<%- url_for(page.path) %>"><%= page.title %></a></div>
+    <div class="time">创建时间：<%- date(page.date) %> / 更新时间：<%- date(page.updated) %></div>
+    <div class="article-toc">
+        <%- toc(page.content, {list_number: false}) %>
+    </div>
+    <div class="article-content markdown-body">
+        <%- page.content %>
+    </div>
+</div>
