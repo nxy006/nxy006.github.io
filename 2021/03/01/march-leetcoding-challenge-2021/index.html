@@ -4,23 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
     <title>Not A Number</title>
-    <!--link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"-->
-    <!-- <link href="https://raw.githubusercontent.com/sindresorhus/github-markdown-css/main/github-markdown.css" rel="stylesheet"> -->
+
+    
     
 <link rel="stylesheet" href="/css/style.css">
 <link rel="stylesheet" href="/css/github-markdown.css">
 
+    
+    
+<link rel="stylesheet" href="/css/hlj/stackoverflow-light.css">
+
+    
+<script src="/js/highlight.pack.js"></script>
 
 <meta name="generator" content="Hexo 5.3.0"></head>
 <body>
     <div class="sidebar">
-    <div class="sidebar-sticky">
+    <div class="sidebar-title">
         <!--img src="/images/logo@2x.png" style="width:127px;"-->
         <a href="https://nxy006.github.io"><h1>Not A Number</h1></a>
-        <p class="lead">
-            求知若渴
-        </p>
     </div>
+    
+    <div class="sidebar-menu">
+        <div><a href="/archives">归档</a></div>
+    </div>
+    
     <div class="sidebar-footer">
         <!-- <iframe 
             frameborder="0"
@@ -46,15 +54,15 @@
     </div>
 </div>
     <div class="content">
-        <!--%- partial('_partial/header') %-->
         
 
 <div class="article">
     <div class="title"><a href="/2021/03/01/march-leetcoding-challenge-2021/">March LeetCoding Challenge 2021 解题报告</a></div>
-    <div class="time">创建时间：2021-03-01 / 更新时间：2021-04-06</div>
+    <div class="time">创建时间：2021-03-01 / 更新时间：2021-05-19</div>
     <div class="article-toc">
         <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Overview"><span class="toc-text">Overview</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-Distribute-Candies"><span class="toc-text">1. Distribute Candies</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Set-Mismatch"><span class="toc-text">2. Set Mismatch</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Missing-Number"><span class="toc-text">3. Missing Number</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Intersection-of-Two-Linked-Lists"><span class="toc-text">4. Intersection of Two Linked Lists</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-Average-of-Levels-in-Binary-Tree"><span class="toc-text">5. Average of Levels in Binary Tree</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-Short-Encoding-of-Words"><span class="toc-text">6. Short Encoding of Words</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-Design-HashMap"><span class="toc-text">7. Design HashMap</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Remove-Palindromic-Subsequences"><span class="toc-text">8. Remove Palindromic Subsequences</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-Add-One-Row-to-Tree"><span class="toc-text">9. Add One Row to Tree</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-Integer-to-Roman"><span class="toc-text">10. Integer to Roman</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-Coin-Change"><span class="toc-text">11. Coin Change</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-Check-If-a-String-Contains-All-Binary-Codes-of-Size-K"><span class="toc-text">12. Check If a String Contains All Binary Codes of Size K</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-Binary-Trees-With-Factors"><span class="toc-text">13. Binary Trees With Factors</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-Swapping-Nodes-in-a-Linked-List"><span class="toc-text">14. Swapping Nodes in a Linked List</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-Encode-and-Decode-TinyURL"><span class="toc-text">15. Encode and Decode TinyURL</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-Best-Time-to-Buy-and-Sell-Stock-with-Transaction-Fee"><span class="toc-text">16. Best Time to Buy and Sell Stock with Transaction Fee</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-Generate-Random-Point-in-a-Circle"><span class="toc-text">17. Generate Random Point in a Circle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#18-Wiggle-Subsequence"><span class="toc-text">18. Wiggle Subsequence</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#19-Keys-and-Rooms"><span class="toc-text">19. Keys and Rooms</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#20-Design-Underground-System"><span class="toc-text">20. Design Underground System</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#21-Reordered-Power-of-2"><span class="toc-text">21. Reordered Power of 2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#22-Vowel-Spellchecker"><span class="toc-text">22. Vowel Spellchecker</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#23-3Sum-With-Multiplicity"><span class="toc-text">23. 3Sum With Multiplicity</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#24-Advantage-Shuffle"><span class="toc-text">24. Advantage Shuffle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#25-Pacific-Atlantic-Water-Flow"><span class="toc-text">25. Pacific Atlantic Water Flow</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#26-Word-Subsets"><span class="toc-text">26. Word Subsets</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#27-Palindromic-Substrings"><span class="toc-text">27. Palindromic Substrings</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#28-Reconstruct-Original-Digits-from-English"><span class="toc-text">28. Reconstruct Original Digits from English</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#29-Flip-Binary-Tree-To-Match-Preorder-Traversal"><span class="toc-text">29. Flip Binary Tree To Match Preorder Traversal</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#30-Russian-Doll-Envelopes"><span class="toc-text">30. Russian Doll Envelopes</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#31-Stamping-The-Sequence"><span class="toc-text">31. Stamping The Sequence</span></a></li></ol>
     </div>
+    
     <div class="article-content markdown-body">
         <h2 id="Overview"><a href="#Overview" class="headerlink" title="Overview"></a>Overview</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/explore/featured/card/march-leetcoding-challenge-2021/">March LeetCoding Challenge 2021</a></p>
 <p><strong>Week 1: March 1st - March 7th</strong></p>
@@ -115,17 +123,16 @@
 <p>Alice 有 n 个（n 为偶数）糖果，提供长度为 n 的数组表示每个糖果的种类，Alice 只能吃 n/2 个糖果，她最多能吃多少种不同的糖果？</p>
 <p><strong>题目解答：</strong></p>
 <p>计算糖果类型数与 n/2 最小值即可</p>
-<pre><code class="java">class Solution &#123;
-    public int distributeCandies(int[] candyType) &#123;
-        Set&lt;Integer&gt; set = new HashSet&lt;&gt;(candyType.length);
-        for(int type : candyType) &#123;
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">distributeCandies</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] candyType)</span> </span>&#123;
+        Set&lt;Integer&gt; set = <span class="hljs-keyword">new</span> HashSet&lt;&gt;(candyType.length);
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> type : candyType) &#123;
             set.add(type);
         &#125;
         
-        return Math.min(set.size(), candyType.length/2);
+        <span class="hljs-keyword">return</span> Math.min(set.size(), candyType.length/<span class="hljs-number">2</span>);
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 
@@ -134,24 +141,23 @@
 <p>给出长度为 n 的数组，取值为 1..n，但其中一个数字发生错误而被写成了另一个值，导致数组中某个取值出现了两次，而另一个取值未出现，请返回这两个值。（先返回出现两次的值，后返回未出现的值）</p>
 <p><strong>题目解答：</strong></p>
 <p>简陋解法，排序后按顺序寻找对应的值。</p>
-<pre><code class="java">class Solution &#123;
-    public int[] findErrorNums(int[] nums) &#123;
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] findErrorNums(<span class="hljs-keyword">int</span>[] nums) &#123;
         Arrays.sort(nums);
         
-        int missing = 0, duplicated = 0;
-        for(int i = 1; i &lt; nums.length; i++) &#123;
-            if (nums[i] == nums[i-1]) &#123;
+        <span class="hljs-keyword">int</span> missing = <span class="hljs-number">0</span>, duplicated = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; nums.length; i++) &#123;
+            <span class="hljs-keyword">if</span> (nums[i] == nums[i-<span class="hljs-number">1</span>]) &#123;
                 duplicated = nums[i];
-            &#125; else if (nums[i] != nums[i-1]+1) &#123;
-                missing = nums[i-1]+1;
+            &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[i] != nums[i-<span class="hljs-number">1</span>]+<span class="hljs-number">1</span>) &#123;
+                missing = nums[i-<span class="hljs-number">1</span>]+<span class="hljs-number">1</span>;
             &#125;
         &#125;
         
-        if (missing == 0) missing = nums[0] != 1 ? 1 : nums.length;
-        return new int[]&#123;duplicated, missing&#125;;
+        <span class="hljs-keyword">if</span> (missing == <span class="hljs-number">0</span>) missing = nums[<span class="hljs-number">0</span>] != <span class="hljs-number">1</span> ? <span class="hljs-number">1</span> : nums.length;
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[]&#123;duplicated, missing&#125;;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="3-Missing-Number"><a href="#3-Missing-Number" class="headerlink" title="3. Missing Number"></a>3. Missing Number</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/missing-number/">268. Missing Number</a> <code>Easy</code></p>
@@ -160,17 +166,16 @@
 <p><strong>提高：</strong> 能否在 <code>O(1)</code> 空间复杂度和 <code>O(n)</code> 时间复杂度内实现？</p>
 <p><strong>题目解答：</strong></p>
 <p>和一道经典的题类似，即列表内仅有一个数出现奇数次，而其他数均出现偶数次，求出现奇数次的这个数。方法是使用 XOR 异或，相同的数即可互相抵消，剩下的值就是答案。本题如果将数组内所有值，与 0..n 所有值异或，即与该题一致，消失的数出现一次，其他数均两次。</p>
-<pre><code class="java">class Solution &#123;
-    public int missingNumber(int[] nums) &#123;
-        int missing = nums.length;
-        for(int i = 0; i &lt; nums.length; i++) &#123;
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">missingNumber</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>&#123;
+        <span class="hljs-keyword">int</span> missing = nums.length;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; nums.length; i++) &#123;
             missing ^= i;
             missing ^= nums[i];
         &#125;
-        return missing;
+        <span class="hljs-keyword">return</span> missing;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="4-Intersection-of-Two-Linked-Lists"><a href="#4-Intersection-of-Two-Linked-Lists" class="headerlink" title="4. Intersection of Two Linked Lists"></a>4. Intersection of Two Linked Lists</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/intersection-of-two-linked-lists/">160. Intersection of Two Linked Lists</a> <code>Easy</code></p>
@@ -180,28 +185,27 @@
 <p><strong>题目解答：</strong></p>
 <p>想在 <code>O(1)</code> 空间复杂度内实现，显然需要两个节点以不同的方式遍历，并不断比较这两个节点。我最开始的想法是用不同的速度循环遍历两个链表，以比较所有节点，但如何判断结束是个问题，且时间复杂度不止 <code>O(n)</code> 。</p>
 <p>参考了解答，只需要将 a+b 与 b+a 同时遍历，则如果链表相交，必然在某个位置指向相同节点。</p>
-<pre><code class="java">/**
- * Definition for singly-linked list.
- * public class ListNode &#123;
- *     int val;
- *     ListNode next;
- *     ListNode(int x) &#123;
- *         val = x;
- *         next = null;
- *     &#125;
- * &#125;
- */
-public class Solution &#123;
-    public ListNode getIntersectionNode(ListNode headA, ListNode headB) &#123;
+<pre><code class="hljs java"><span class="hljs-comment">/**</span>
+<span class="hljs-comment"> * Definition for singly-linked list.</span>
+<span class="hljs-comment"> * public class ListNode &#123;</span>
+<span class="hljs-comment"> *     int val;</span>
+<span class="hljs-comment"> *     ListNode next;</span>
+<span class="hljs-comment"> *     ListNode(int x) &#123;</span>
+<span class="hljs-comment"> *         val = x;</span>
+<span class="hljs-comment"> *         next = null;</span>
+<span class="hljs-comment"> *     &#125;</span>
+<span class="hljs-comment"> * &#125;</span>
+<span class="hljs-comment"> */</span>
+<span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">getIntersectionNode</span><span class="hljs-params">(ListNode headA, ListNode headB)</span> </span>&#123;
         ListNode p1 = headA, p2 = headB;
-        while(p1 != p2) &#123;
-            p1 = p1 == null ? headB : p1.next;
-            p2 = p2 == null ? headA : p2.next;
+        <span class="hljs-keyword">while</span>(p1 != p2) &#123;
+            p1 = p1 == <span class="hljs-keyword">null</span> ? headB : p1.next;
+            p2 = p2 == <span class="hljs-keyword">null</span> ? headA : p2.next;
         &#125;
-        return p1;
+        <span class="hljs-keyword">return</span> p1;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="5-Average-of-Levels-in-Binary-Tree"><a href="#5-Average-of-Levels-in-Binary-Tree" class="headerlink" title="5. Average of Levels in Binary Tree"></a>5. Average of Levels in Binary Tree</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/average-of-levels-in-binary-tree/">637. Average of Levels in Binary Tree</a> <code>Easy</code></p>
@@ -209,58 +213,57 @@ public class Solution &#123;
 <p>给出非空二叉树，求二叉树各行的平均值。（节点值在 32-bit 有符号整数范围内）</p>
 <p><strong>题目解答：</strong></p>
 <p>BFS 层序遍历即可，注意每行总数需要用 <code>long</code> 保存。</p>
-<pre><code class="java">/**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() &#123;&#125;
- *     TreeNode(int val) &#123; this.val = val; &#125;
- *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     &#125;
- * &#125;
- */
-class Solution &#123;
-    public List&lt;Double&gt; averageOfLevels(TreeNode root) &#123;
-        List&lt;Double&gt; ret = new ArrayList&lt;&gt;();
-        if (root == null) return ret;
+<pre><code class="hljs java"><span class="hljs-comment">/**</span>
+<span class="hljs-comment"> * Definition for a binary tree node.</span>
+<span class="hljs-comment"> * public class TreeNode &#123;</span>
+<span class="hljs-comment"> *     int val;</span>
+<span class="hljs-comment"> *     TreeNode left;</span>
+<span class="hljs-comment"> *     TreeNode right;</span>
+<span class="hljs-comment"> *     TreeNode() &#123;&#125;</span>
+<span class="hljs-comment"> *     TreeNode(int val) &#123; this.val = val; &#125;</span>
+<span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) &#123;</span>
+<span class="hljs-comment"> *         this.val = val;</span>
+<span class="hljs-comment"> *         this.left = left;</span>
+<span class="hljs-comment"> *         this.right = right;</span>
+<span class="hljs-comment"> *     &#125;</span>
+<span class="hljs-comment"> * &#125;</span>
+<span class="hljs-comment"> */</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Double&gt; <span class="hljs-title">averageOfLevels</span><span class="hljs-params">(TreeNode root)</span> </span>&#123;
+        List&lt;Double&gt; ret = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        <span class="hljs-keyword">if</span> (root == <span class="hljs-keyword">null</span>) <span class="hljs-keyword">return</span> ret;
         
-        Queue&lt;Pair&lt;TreeNode, Integer&gt;&gt; queue = new LinkedList&lt;&gt;();
-        queue.offer(new Pair&lt;&gt;(root, 1));
+        Queue&lt;Pair&lt;TreeNode, Integer&gt;&gt; queue = <span class="hljs-keyword">new</span> LinkedList&lt;&gt;();
+        queue.offer(<span class="hljs-keyword">new</span> Pair&lt;&gt;(root, <span class="hljs-number">1</span>));
         
-        long sum = 0;
-        int cnt = 0, tier = 1;
-        while(!queue.isEmpty()) &#123;
+        <span class="hljs-keyword">long</span> sum = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> cnt = <span class="hljs-number">0</span>, tier = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">while</span>(!queue.isEmpty()) &#123;
             Pair&lt;TreeNode, Integer&gt; pair = queue.poll();
             TreeNode node = pair.getKey();
-            if (node == null) continue;
+            <span class="hljs-keyword">if</span> (node == <span class="hljs-keyword">null</span>) <span class="hljs-keyword">continue</span>;
             
-            if (pair.getValue() &gt; tier) &#123;
-                ret.add(sum*1.0/cnt);
-                sum = 0;
-                cnt = 0;
+            <span class="hljs-keyword">if</span> (pair.getValue() &gt; tier) &#123;
+                ret.add(sum*<span class="hljs-number">1.0</span>/cnt);
+                sum = <span class="hljs-number">0</span>;
+                cnt = <span class="hljs-number">0</span>;
                 tier++;
             &#125;
             sum += node.val;
             cnt++;
             
-            if (node.left != null) &#123;
-                queue.offer(new Pair&lt;&gt;(node.left, pair.getValue()+1));
+            <span class="hljs-keyword">if</span> (node.left != <span class="hljs-keyword">null</span>) &#123;
+                queue.offer(<span class="hljs-keyword">new</span> Pair&lt;&gt;(node.left, pair.getValue()+<span class="hljs-number">1</span>));
             &#125;
-            if (node.right != null) &#123;
-                queue.offer(new Pair&lt;&gt;(node.right, pair.getValue()+1));
+            <span class="hljs-keyword">if</span> (node.right != <span class="hljs-keyword">null</span>) &#123;
+                queue.offer(<span class="hljs-keyword">new</span> Pair&lt;&gt;(node.right, pair.getValue()+<span class="hljs-number">1</span>));
             &#125;
         &#125;
-        ret.add(sum*1.0/cnt);
+        ret.add(sum*<span class="hljs-number">1.0</span>/cnt);
         
-        return ret;
+        <span class="hljs-keyword">return</span> ret;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="6-Short-Encoding-of-Words"><a href="#6-Short-Encoding-of-Words" class="headerlink" title="6. Short Encoding of Words"></a>6. Short Encoding of Words</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/short-encoding-of-words/">820. Short Encoding of Words</a> <code>Medium</code></p>
@@ -274,49 +277,48 @@ class Solution &#123;
 <p>根据给出的 <code>words</code> 找到最短的有效编码字符串 <code>s</code> 长度。</p>
 <p><strong>题目解答：</strong></p>
 <p>构造一棵后缀树，并计数各分支最大长度之和</p>
-<pre><code class="java">class Solution &#123;
-    public int minimumLengthEncoding(String[] words) &#123;
-        Node root = new Node(&#39;#&#39;);
-        for(String word : words) &#123;
-            buildTree(word, word.length()-1, root);
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">minimumLengthEncoding</span><span class="hljs-params">(String[] words)</span> </span>&#123;
+        Node root = <span class="hljs-keyword">new</span> Node(<span class="hljs-string">&#x27;#&#x27;</span>);
+        <span class="hljs-keyword">for</span>(String word : words) &#123;
+            buildTree(word, word.length()-<span class="hljs-number">1</span>, root);
         &#125;
         
-        return conutForTree(root, 0);
+        <span class="hljs-keyword">return</span> conutForTree(root, <span class="hljs-number">0</span>);
     &#125;
     
-    private void buildTree(String word, int index, Node node) &#123;
-        if (index &lt; 0) return ;
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">buildTree</span><span class="hljs-params">(String word, <span class="hljs-keyword">int</span> index, Node node)</span> </span>&#123;
+        <span class="hljs-keyword">if</span> (index &lt; <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> ;
         
-        char c = word.charAt(index);
+        <span class="hljs-keyword">char</span> c = word.charAt(index);
         Node nextNode = node.nexts.get(c);
-        if (nextNode == null) &#123;
-            nextNode = new Node(c);
+        <span class="hljs-keyword">if</span> (nextNode == <span class="hljs-keyword">null</span>) &#123;
+            nextNode = <span class="hljs-keyword">new</span> Node(c);
             node.nexts.put(c, nextNode);
         &#125;
-        buildTree(word, index-1, nextNode);
+        buildTree(word, index-<span class="hljs-number">1</span>, nextNode);
     &#125;
     
-    private int conutForTree(Node node, int start) &#123;
-        if (node.nexts.size() == 0) return start+1;
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">conutForTree</span><span class="hljs-params">(Node node, <span class="hljs-keyword">int</span> start)</span> </span>&#123;
+        <span class="hljs-keyword">if</span> (node.nexts.size() == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> start+<span class="hljs-number">1</span>;
         
-        int cnt = 0;
-        for(Node nextNode : node.nexts.values()) &#123;
-            cnt += conutForTree(nextNode, start+1);
+        <span class="hljs-keyword">int</span> cnt = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span>(Node nextNode : node.nexts.values()) &#123;
+            cnt += conutForTree(nextNode, start+<span class="hljs-number">1</span>);
         &#125;
-        return cnt;
+        <span class="hljs-keyword">return</span> cnt;
     &#125;
     
-    private static class Node &#123;
-        char c;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span> </span>&#123;
+        <span class="hljs-keyword">char</span> c;
         Map&lt;Character, Node&gt; nexts;
         
-        public Node(char c) &#123;
-            this.c = c;
-            this.nexts = new HashMap&lt;&gt;();
+        <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Node</span><span class="hljs-params">(<span class="hljs-keyword">char</span> c)</span> </span>&#123;
+            <span class="hljs-keyword">this</span>.c = c;
+            <span class="hljs-keyword">this</span>.nexts = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
         &#125;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="7-Design-HashMap"><a href="#7-Design-HashMap" class="headerlink" title="7. Design HashMap"></a>7. Design HashMap</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/design-hashmap/">706. Design HashMap</a> <code>Easy</code></p>
@@ -324,39 +326,38 @@ class Solution &#123;
 <p>实现 MyHashMap 类，使之能够实现以下操作：<code>MyHashMap()</code>，<code>put</code>，<code>get</code>，<code>remve</code> </p>
 <p><strong>题目解答：</strong></p>
 <p>题目中给出了最大范围 0 ~ $10^6$，可以直接用数组实现。当然正规做法是自己实现，链式方法也很容易实现。</p>
-<pre><code class="java">class MyHashMap &#123;
-    int[] data;
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MyHashMap</span> </span>&#123;
+    <span class="hljs-keyword">int</span>[] data;
 
-    /** Initialize your data structure here. */
-    public MyHashMap() &#123;
-        data = new int[1000001];
-        Arrays.fill(data, -1);
+    <span class="hljs-comment">/** Initialize your data structure here. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">MyHashMap</span><span class="hljs-params">()</span> </span>&#123;
+        data = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">1000001</span>];
+        Arrays.fill(data, -<span class="hljs-number">1</span>);
     &#125;
     
-    /** value will always be non-negative. */
-    public void put(int key, int value) &#123;
+    <span class="hljs-comment">/** value will always be non-negative. */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">put</span><span class="hljs-params">(<span class="hljs-keyword">int</span> key, <span class="hljs-keyword">int</span> value)</span> </span>&#123;
         data[key] = value;
     &#125;
     
-    /** Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key */
-    public int get(int key) &#123;
-        return data[key];
+    <span class="hljs-comment">/** Returns the value to which the specified key is mapped, or -1 if this map contains no mapping for the key */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">get</span><span class="hljs-params">(<span class="hljs-keyword">int</span> key)</span> </span>&#123;
+        <span class="hljs-keyword">return</span> data[key];
     &#125;
     
-    /** Removes the mapping of the specified value key if this map contains a mapping for the key */
-    public void remove(int key) &#123;
-        data[key] = -1;
+    <span class="hljs-comment">/** Removes the mapping of the specified value key if this map contains a mapping for the key */</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">remove</span><span class="hljs-params">(<span class="hljs-keyword">int</span> key)</span> </span>&#123;
+        data[key] = -<span class="hljs-number">1</span>;
     &#125;
 &#125;
 
-/**
- * Your MyHashMap object will be instantiated and called as such:
- * MyHashMap obj = new MyHashMap();
- * obj.put(key,value);
- * int param_2 = obj.get(key);
- * obj.remove(key);
- */
-</code></pre>
+<span class="hljs-comment">/**</span>
+<span class="hljs-comment"> * Your MyHashMap object will be instantiated and called as such:</span>
+<span class="hljs-comment"> * MyHashMap obj = new MyHashMap();</span>
+<span class="hljs-comment"> * obj.put(key,value);</span>
+<span class="hljs-comment"> * int param_2 = obj.get(key);</span>
+<span class="hljs-comment"> * obj.remove(key);</span>
+<span class="hljs-comment"> */</span></code></pre>
 <br/>
 
 <h2 id="8-Remove-Palindromic-Subsequences"><a href="#8-Remove-Palindromic-Subsequences" class="headerlink" title="8. Remove Palindromic Subsequences"></a>8. Remove Palindromic Subsequences</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/remove-palindromic-subsequences/">1332. Remove Palindromic Subsequences</a> <code>Easy</code></p>
@@ -364,19 +365,18 @@ class Solution &#123;
 <p>字符串 <code>s</code> 仅包含 <code>a</code>、<code>b</code> 字符，每次可以从字符串中移除一个回文子序列（子序列可以由原字符串任意删除某些字符得到，不要求连续），求最少多次操作后，字符串为空。</p>
 <p><strong>题目解答：</strong></p>
 <p>思考题，因为只有两种字符，如已经是回文串只需一次，否则可以先移除所有的 <code>a</code>，再移除所有的 <code>b</code> ，两次即可。</p>
-<pre><code class="java">class Solution &#123;
-    public int removePalindromeSub(String s) &#123;
-        if (s.length() == 0) return 0;
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">removePalindromeSub</span><span class="hljs-params">(String s)</span> </span>&#123;
+        <span class="hljs-keyword">if</span> (s.length() == <span class="hljs-number">0</span>) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
         
-        for(int i = 0, j = s.length()-1; i &lt; j; i++, j--) &#123;
-            if (s.charAt(i) != s.charAt(j)) &#123;
-                return 2;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>, j = s.length()-<span class="hljs-number">1</span>; i &lt; j; i++, j--) &#123;
+            <span class="hljs-keyword">if</span> (s.charAt(i) != s.charAt(j)) &#123;
+                <span class="hljs-keyword">return</span> <span class="hljs-number">2</span>;
             &#125;
         &#125;
-        return 1;
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="9-Add-One-Row-to-Tree"><a href="#9-Add-One-Row-to-Tree" class="headerlink" title="9. Add One Row to Tree"></a>9. Add One Row to Tree</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/add-one-row-to-tree/">623. Add One Row to Tree</a> <code>Medium</code></p>
@@ -388,43 +388,42 @@ class Solution &#123;
 </ul>
 <p><strong>题目解答：</strong></p>
 <p>深度优先，找到对应行后按规则更新节点即可。</p>
-<pre><code class="java">/**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() &#123;&#125;
- *     TreeNode(int val) &#123; this.val = val; &#125;
- *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     &#125;
- * &#125;
- */
-class Solution &#123;
-    public TreeNode addOneRow(TreeNode root, int v, int d) &#123;
-        if (d == 1) &#123;
-            return new TreeNode(v, root, null);
+<pre><code class="hljs java"><span class="hljs-comment">/**</span>
+<span class="hljs-comment"> * Definition for a binary tree node.</span>
+<span class="hljs-comment"> * public class TreeNode &#123;</span>
+<span class="hljs-comment"> *     int val;</span>
+<span class="hljs-comment"> *     TreeNode left;</span>
+<span class="hljs-comment"> *     TreeNode right;</span>
+<span class="hljs-comment"> *     TreeNode() &#123;&#125;</span>
+<span class="hljs-comment"> *     TreeNode(int val) &#123; this.val = val; &#125;</span>
+<span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) &#123;</span>
+<span class="hljs-comment"> *         this.val = val;</span>
+<span class="hljs-comment"> *         this.left = left;</span>
+<span class="hljs-comment"> *         this.right = right;</span>
+<span class="hljs-comment"> *     &#125;</span>
+<span class="hljs-comment"> * &#125;</span>
+<span class="hljs-comment"> */</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> TreeNode <span class="hljs-title">addOneRow</span><span class="hljs-params">(TreeNode root, <span class="hljs-keyword">int</span> v, <span class="hljs-keyword">int</span> d)</span> </span>&#123;
+        <span class="hljs-keyword">if</span> (d == <span class="hljs-number">1</span>) &#123;
+            <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> TreeNode(v, root, <span class="hljs-keyword">null</span>);
         &#125;
-        addOneRow(root, 1, v, d);
-        return root;
+        addOneRow(root, <span class="hljs-number">1</span>, v, d);
+        <span class="hljs-keyword">return</span> root;
     &#125;
 
-    private void addOneRow(TreeNode node, int depth, int v, int d) &#123;
-        if (node == null) return ;
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">addOneRow</span><span class="hljs-params">(TreeNode node, <span class="hljs-keyword">int</span> depth, <span class="hljs-keyword">int</span> v, <span class="hljs-keyword">int</span> d)</span> </span>&#123;
+        <span class="hljs-keyword">if</span> (node == <span class="hljs-keyword">null</span>) <span class="hljs-keyword">return</span> ;
 
-        if (depth == d-1) &#123;
-            node.left = new TreeNode(v, node.left, null);
-            node.right = new TreeNode(v, null, node.right);
-        &#125; else &#123;
-            addOneRow(node.left, depth+1, v, d);
-            addOneRow(node.right, depth+1, v, d);
+        <span class="hljs-keyword">if</span> (depth == d-<span class="hljs-number">1</span>) &#123;
+            node.left = <span class="hljs-keyword">new</span> TreeNode(v, node.left, <span class="hljs-keyword">null</span>);
+            node.right = <span class="hljs-keyword">new</span> TreeNode(v, <span class="hljs-keyword">null</span>, node.right);
+        &#125; <span class="hljs-keyword">else</span> &#123;
+            addOneRow(node.left, depth+<span class="hljs-number">1</span>, v, d);
+            addOneRow(node.right, depth+<span class="hljs-number">1</span>, v, d);
         &#125;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="10-Integer-to-Roman"><a href="#10-Integer-to-Roman" class="headerlink" title="10. Integer to Roman"></a>10. Integer to Roman</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/integer-to-roman/">12. Integer to Roman</a> <code>Medium</code></p>
@@ -433,21 +432,20 @@ class Solution &#123;
 <p><strong>题目解答：</strong></p>
 <p>罗马数字从字符串到数字还算能明白规则，但到底如何从数字表示，就很难描述情况，最后还是抄了答案。（捂脸）</p>
 <p>其实就是优先用更大的单位表示，表示不了时再尝试小单位。</p>
-<pre><code class="java">class Solution &#123;
-    final static int[]      val = &#123;1000, 900, 500, 400 , 100,   90,  50,  40,   10,    9,   5,    4,   1&#125;;
-    final static String[] roman = &#123; &quot;M&quot;,&quot;CM&quot;, &quot;D&quot;, &quot;CD&quot;, &quot;C&quot;, &quot;XC&quot;, &quot;L&quot;, &quot;XL&quot;, &quot;X&quot;, &quot;IX&quot;, &quot;V&quot;, &quot;IV&quot;, &quot;I&quot;&#125;;
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span>[]      val = &#123;<span class="hljs-number">1000</span>, <span class="hljs-number">900</span>, <span class="hljs-number">500</span>, <span class="hljs-number">400</span> , <span class="hljs-number">100</span>,   <span class="hljs-number">90</span>,  <span class="hljs-number">50</span>,  <span class="hljs-number">40</span>,   <span class="hljs-number">10</span>,    <span class="hljs-number">9</span>,   <span class="hljs-number">5</span>,    <span class="hljs-number">4</span>,   <span class="hljs-number">1</span>&#125;;
+    <span class="hljs-keyword">final</span> <span class="hljs-keyword">static</span> String[] roman = &#123; <span class="hljs-string">&quot;M&quot;</span>,<span class="hljs-string">&quot;CM&quot;</span>, <span class="hljs-string">&quot;D&quot;</span>, <span class="hljs-string">&quot;CD&quot;</span>, <span class="hljs-string">&quot;C&quot;</span>, <span class="hljs-string">&quot;XC&quot;</span>, <span class="hljs-string">&quot;L&quot;</span>, <span class="hljs-string">&quot;XL&quot;</span>, <span class="hljs-string">&quot;X&quot;</span>, <span class="hljs-string">&quot;IX&quot;</span>, <span class="hljs-string">&quot;V&quot;</span>, <span class="hljs-string">&quot;IV&quot;</span>, <span class="hljs-string">&quot;I&quot;</span>&#125;;
 
-    public String intToRoman(int num) &#123;
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; num &gt; 0; i++)
-            while (num &gt;= val[i]) &#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">intToRoman</span><span class="hljs-params">(<span class="hljs-keyword">int</span> num)</span> </span>&#123;
+        StringBuilder sb = <span class="hljs-keyword">new</span> StringBuilder();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; num &gt; <span class="hljs-number">0</span>; i++)
+            <span class="hljs-keyword">while</span> (num &gt;= val[i]) &#123;
                 sb.append(roman[i]);
                 num -= val[i];
             &#125;
-        return sb.toString();
+        <span class="hljs-keyword">return</span> sb.toString();
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="11-Coin-Change"><a href="#11-Coin-Change" class="headerlink" title="11. Coin Change"></a>11. Coin Change</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/coin-change/">322. Coin Change</a> <code>Medium</code></p>
@@ -455,23 +453,22 @@ class Solution &#123;
 <p>给出硬币面额列表 coins 和目标金额，求最少可以用多少个硬币（每种面额可使用的次数不限）组成目标金额，如果无法组成目标金额，返回 -1</p>
 <p><strong>题目解答：</strong></p>
 <p>对目标金额 i 来说，dp[i] 的解为 dp[i-coins[j]]+1 的最小值。即减去一个硬币值后的最小解+1</p>
-<pre><code class="java">class Solution &#123;
-    public int coinChange(int[] coins, int amount) &#123;
-        int[] dp = new int[amount + 1];
-        Arrays.fill(dp, 10001);
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">coinChange</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] coins, <span class="hljs-keyword">int</span> amount)</span> </span>&#123;
+        <span class="hljs-keyword">int</span>[] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[amount + <span class="hljs-number">1</span>];
+        Arrays.fill(dp, <span class="hljs-number">10001</span>);
         
-        dp[0] = 0;
-        for (int i = 1; i &lt;= amount; i++) &#123;
-            for (int j = 0; j &lt; coins.length; j++) &#123;
-                if (coins[j] &lt;= i) &#123;
-                    dp[i] = Math.min(dp[i], dp[i - coins[j]] + 1);
+        dp[<span class="hljs-number">0</span>] = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt;= amount; i++) &#123;
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; coins.length; j++) &#123;
+                <span class="hljs-keyword">if</span> (coins[j] &lt;= i) &#123;
+                    dp[i] = Math.min(dp[i], dp[i - coins[j]] + <span class="hljs-number">1</span>);
                 &#125;
             &#125;
         &#125;
-        return dp[amount] &gt;= 10001 ? -1 : dp[amount];
+        <span class="hljs-keyword">return</span> dp[amount] &gt;= <span class="hljs-number">10001</span> ? -<span class="hljs-number">1</span> : dp[amount];
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="12-Check-If-a-String-Contains-All-Binary-Codes-of-Size-K"><a href="#12-Check-If-a-String-Contains-All-Binary-Codes-of-Size-K" class="headerlink" title="12. Check If a String Contains All Binary Codes of Size K"></a>12. Check If a String Contains All Binary Codes of Size K</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/check-if-a-string-contains-all-binary-codes-of-size-k/">1461. Check If a String Contains All Binary Codes of Size K</a> <code>Medium</code></p>
@@ -484,27 +481,26 @@ class Solution &#123;
 <li>基于从 i 开始的子串运算从 i+1 子串的值，优化时间</li>
 </ul>
 <p>比如对于字符串 <code>1101</code>，<code>110</code> 字符串左移并去除最高位即可得到 <code>(110 &lt;&lt; 1) &amp; 111 = 100</code>， 加上新值即可得到 <code>100 &amp; 1 = 101</code>，即 <code>101</code> 字符串的数字值</p>
-<pre><code class="java">class Solution &#123;
-    public boolean hasAllCodes(String s, int k) &#123;
-        int n = 1 &lt;&lt; k;
-        boolean[] visited = new boolean[n];
-        int allOne = n-1;
-        int hash = 0;
-        int cnt = 0;
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">hasAllCodes</span><span class="hljs-params">(String s, <span class="hljs-keyword">int</span> k)</span> </span>&#123;
+        <span class="hljs-keyword">int</span> n = <span class="hljs-number">1</span> &lt;&lt; k;
+        <span class="hljs-keyword">boolean</span>[] visited = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[n];
+        <span class="hljs-keyword">int</span> allOne = n-<span class="hljs-number">1</span>;
+        <span class="hljs-keyword">int</span> hash = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span> cnt = <span class="hljs-number">0</span>;
         
-        for(int i = 0; i &lt; s.length(); i++) &#123;
-            hash = (hash &lt;&lt; 1 &amp; allOne) | s.charAt(i) - &#39;0&#39;;
-            if (i &gt;= k-1 &amp;&amp; !visited[hash]) &#123;
-                visited[hash] = true;
-                if (++cnt == n) &#123;
-                    return true;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; s.length(); i++) &#123;
+            hash = (hash &lt;&lt; <span class="hljs-number">1</span> &amp; allOne) | s.charAt(i) - <span class="hljs-string">&#x27;0&#x27;</span>;
+            <span class="hljs-keyword">if</span> (i &gt;= k-<span class="hljs-number">1</span> &amp;&amp; !visited[hash]) &#123;
+                visited[hash] = <span class="hljs-keyword">true</span>;
+                <span class="hljs-keyword">if</span> (++cnt == n) &#123;
+                    <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
                 &#125;
             &#125;
         &#125;
-        return false;
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="13-Binary-Trees-With-Factors"><a href="#13-Binary-Trees-With-Factors" class="headerlink" title="13. Binary Trees With Factors"></a>13. Binary Trees With Factors</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/binary-trees-with-factors/">823. Binary Trees With Factors</a> <code>Medium</code></p>
@@ -513,33 +509,32 @@ class Solution &#123;
 <p><strong>题目解答：</strong></p>
 <p>以 a 为父节点的树总量为，所有乘积为 a 的一组节点，各自作为父节点的解答乘积之和。</p>
 <p>最开始用的是求出所有乘积的方式，超时。查询讨论后，发现应该反过来思考，根据某个父节点 a 与某个子节点 b，查找 <code>a/b</code> 是否存在。</p>
-<pre><code class="java">class Solution &#123;
-    private static final int MOD = 1000000007;
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> MOD = <span class="hljs-number">1000000007</span>;
     
-    public int numFactoredBinaryTrees(int[] arr) &#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">numFactoredBinaryTrees</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr)</span> </span>&#123;
         Arrays.sort(arr);
-        Map&lt;Integer, Integer&gt; map = new HashMap();
-        for (int i = 0; i &lt; arr.length; i++) &#123;
+        Map&lt;Integer, Integer&gt; map = <span class="hljs-keyword">new</span> HashMap();
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) &#123;
             map.put(arr[i], i);
         &#125;
         
-        long ret = 0;
-        long[] dp = new long[arr.length];
-        Arrays.fill(dp, 1l);
-        for(int i = 0; i &lt; arr.length; i++) &#123;
-            for(int j = 0; j &lt; i; j++) &#123;
-                int right;
-                if (arr[i] % arr[j] == 0 &amp;&amp; map.containsKey(right = arr[i] / arr[j])) &#123;
+        <span class="hljs-keyword">long</span> ret = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">long</span>[] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">long</span>[arr.length];
+        Arrays.fill(dp, <span class="hljs-number">1l</span>);
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) &#123;
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; i; j++) &#123;
+                <span class="hljs-keyword">int</span> right;
+                <span class="hljs-keyword">if</span> (arr[i] % arr[j] == <span class="hljs-number">0</span> &amp;&amp; map.containsKey(right = arr[i] / arr[j])) &#123;
                     dp[i] = (dp[i] + dp[j] * dp[map.get(right)]) % MOD;
                 &#125;
             &#125;
             ret = (ret + dp[i]) % MOD;
         &#125;
         
-        return (int) (ret % MOD);
+        <span class="hljs-keyword">return</span> (<span class="hljs-keyword">int</span>) (ret % MOD);
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="14-Swapping-Nodes-in-a-Linked-List"><a href="#14-Swapping-Nodes-in-a-Linked-List" class="headerlink" title="14. Swapping Nodes in a Linked List"></a>14. Swapping Nodes in a Linked List</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/swapping-nodes-in-a-linked-list/">1721. Swapping Nodes in a Linked List</a> <code>Medium</code></p>
@@ -547,38 +542,37 @@ class Solution &#123;
 <p>给定链表，将链表从前到后第 k 个节点与从后到前第 k 个节点交换位置。</p>
 <p><strong>题目解答：</strong></p>
 <p>与求倒数第 k 个节点类似，使用双指针扫描，两个指针相距 k 距离，第一个右指针位置与最后一个左指针位置即为需要交换的节点。</p>
-<pre><code class="java">/**
- * Definition for singly-linked list.
- * public class ListNode &#123;
- *     int val;
- *     ListNode next;
- *     ListNode() &#123;&#125;
- *     ListNode(int val) &#123; this.val = val; &#125;
- *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;
- * &#125;
- */
-class Solution &#123;
-    public ListNode swapNodes(ListNode head, int k) &#123;
+<pre><code class="hljs java"><span class="hljs-comment">/**</span>
+<span class="hljs-comment"> * Definition for singly-linked list.</span>
+<span class="hljs-comment"> * public class ListNode &#123;</span>
+<span class="hljs-comment"> *     int val;</span>
+<span class="hljs-comment"> *     ListNode next;</span>
+<span class="hljs-comment"> *     ListNode() &#123;&#125;</span>
+<span class="hljs-comment"> *     ListNode(int val) &#123; this.val = val; &#125;</span>
+<span class="hljs-comment"> *     ListNode(int val, ListNode next) &#123; this.val = val; this.next = next; &#125;</span>
+<span class="hljs-comment"> * &#125;</span>
+<span class="hljs-comment"> */</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> ListNode <span class="hljs-title">swapNodes</span><span class="hljs-params">(ListNode head, <span class="hljs-keyword">int</span> k)</span> </span>&#123;
         ListNode node1 = head, node2 = head;
         ListNode left = head, right = head;
-        for(int i = 1; i &lt; k; i++) &#123;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; k; i++) &#123;
             right = right.next;
             node1 = right;
         &#125;
         
-        while(right.next != null) &#123;
+        <span class="hljs-keyword">while</span>(right.next != <span class="hljs-keyword">null</span>) &#123;
             left = left.next;
             right = right.next;
             node2 = left;
         &#125;
         
-        int tmp = node1.val;
+        <span class="hljs-keyword">int</span> tmp = node1.val;
         node1.val = node2.val;
         node2.val = tmp;
-        return head;
+        <span class="hljs-keyword">return</span> head;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="15-Encode-and-Decode-TinyURL"><a href="#15-Encode-and-Decode-TinyURL" class="headerlink" title="15. Encode and Decode TinyURL"></a>15. Encode and Decode TinyURL</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/encode-and-decode-tinyurl/">535. Encode and Decode TinyURL</a> <code>Medium</code></p>
@@ -586,36 +580,35 @@ class Solution &#123;
 <p>设计一个短链接生成方法，对相同链接要生成相同的短链接，不同链接则生成不同的链接。</p>
 <p><strong>题目解答：</strong></p>
 <p>这道题一开始想复杂了，恰好几个月内看过知乎如何设计短链接服务的问题，总在考虑是否会存在 Hash 冲突，后来看了下解法才发现根本无关。直观解法，用两个 Map 分别记录每个链接保存映射关系，和短链接到原链接的映射关系。难点说不定是如何生成随机字符串。</p>
-<pre><code class="java">public class Codec &#123;
-    private static final String host = &quot;http://tinyurl.com/&quot;;
-    private static final String str = &quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&quot;;
+<pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Codec</span> </span>&#123;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String host = <span class="hljs-string">&quot;http://tinyurl.com/&quot;</span>;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> String str = <span class="hljs-string">&quot;abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789&quot;</span>;
     
-    private Map&lt;String, String&gt; shortToOrignMap = new HashMap&lt;&gt;();
-    private Map&lt;String, String&gt; orignToShortMap = new HashMap&lt;&gt;();
+    <span class="hljs-keyword">private</span> Map&lt;String, String&gt; shortToOrignMap = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+    <span class="hljs-keyword">private</span> Map&lt;String, String&gt; orignToShortMap = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
 
-    // Encodes a URL to a shortened URL.
-    public String encode(String longUrl) &#123;
-        if (orignToShortMap.containsKey(longUrl)) return orignToShortMap.get(longUrl);
+    <span class="hljs-comment">// Encodes a URL to a shortened URL.</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">encode</span><span class="hljs-params">(String longUrl)</span> </span>&#123;
+        <span class="hljs-keyword">if</span> (orignToShortMap.containsKey(longUrl)) <span class="hljs-keyword">return</span> orignToShortMap.get(longUrl);
         
-        String shortUrl = &quot;&quot;;
-        while(shortUrl.length() == 0 || shortToOrignMap.containsKey(shortUrl)) &#123;
-            shortUrl += str.charAt(new Random().nextInt(62));
+        String shortUrl = <span class="hljs-string">&quot;&quot;</span>;
+        <span class="hljs-keyword">while</span>(shortUrl.length() == <span class="hljs-number">0</span> || shortToOrignMap.containsKey(shortUrl)) &#123;
+            shortUrl += str.charAt(<span class="hljs-keyword">new</span> Random().nextInt(<span class="hljs-number">62</span>));
         &#125;
         shortToOrignMap.put(shortUrl, longUrl);
         orignToShortMap.put(longUrl, shortUrl);
-        return shortUrl;
+        <span class="hljs-keyword">return</span> shortUrl;
     &#125;
 
-    // Decodes a shortened URL to its original URL.
-    public String decode(String shortUrl) &#123;
-        return shortToOrignMap.get(shortUrl.replace(host, &quot;&quot;));
+    <span class="hljs-comment">// Decodes a shortened URL to its original URL.</span>
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">decode</span><span class="hljs-params">(String shortUrl)</span> </span>&#123;
+        <span class="hljs-keyword">return</span> shortToOrignMap.get(shortUrl.replace(host, <span class="hljs-string">&quot;&quot;</span>));
     &#125;
 &#125;
 
-// Your Codec object will be instantiated and called as such:
-// Codec codec = new Codec();
-// codec.decode(codec.encode(url));
-</code></pre>
+<span class="hljs-comment">// Your Codec object will be instantiated and called as such:</span>
+<span class="hljs-comment">// Codec codec = new Codec();</span>
+<span class="hljs-comment">// codec.decode(codec.encode(url));</span></code></pre>
 <br/>
 
 <h2 id="16-Best-Time-to-Buy-and-Sell-Stock-with-Transaction-Fee"><a href="#16-Best-Time-to-Buy-and-Sell-Stock-with-Transaction-Fee" class="headerlink" title="16. Best Time to Buy and Sell Stock with Transaction Fee"></a>16. Best Time to Buy and Sell Stock with Transaction Fee</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/best-time-to-buy-and-sell-stock-with-transaction-fee/">417. Best Time to Buy and Sell Stock with Transaction Fee</a> <code>Medium</code></p>
@@ -629,17 +622,16 @@ class Solution &#123;
 <li>购买股票：<code>hold = max(hold, cash - prices[i])</code></li>
 </ul>
 <p>很精妙的解法，根据上一天的最优利润，与今天是否买入/卖出的选择结合。但也因为太精妙了因而想不到如何以通用的思路找到这个解答，还需要后续考虑下思考思路。</p>
-<pre><code class="java">class Solution &#123;
-    public int maxProfit(int[] prices, int fee) &#123;
-        int cash = 0, hold = -prices[0];
-        for(int i = 1; i &lt; prices.length; i++) &#123;
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxProfit</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] prices, <span class="hljs-keyword">int</span> fee)</span> </span>&#123;
+        <span class="hljs-keyword">int</span> cash = <span class="hljs-number">0</span>, hold = -prices[<span class="hljs-number">0</span>];
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; prices.length; i++) &#123;
             cash = Math.max(cash, hold + prices[i] - fee);
             hold = Math.max(hold, cash - prices[i]);
         &#125;
-        return cash;
+        <span class="hljs-keyword">return</span> cash;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="17-Generate-Random-Point-in-a-Circle"><a href="#17-Generate-Random-Point-in-a-Circle" class="headerlink" title="17. Generate Random Point in a Circle"></a>17. Generate Random Point in a Circle</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/generate-random-point-in-a-circle/">478. Generate Random Point in a Circle</a> <code>Medium</code></p>
@@ -647,32 +639,31 @@ class Solution &#123;
 <p>给出一个圆心和半径，实现 <code>randPoint</code> 方法返回圆内随机一点的坐标</p>
 <p><strong>题目解答：</strong></p>
 <p>这道题考察的点是返回的位置要尽量随机，通用的解法就是，在所有可能范围内尝试，然后剔除那些不符合规则的数据。</p>
-<pre><code class="java">class Solution &#123;
-    double x, y, r;
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-keyword">double</span> x, y, r;
 
-    public Solution(double radius, double x_center, double y_center) &#123;
-        this.r = radius;
-        this.x = x_center;
-        this.y = y_center;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">Solution</span><span class="hljs-params">(<span class="hljs-keyword">double</span> radius, <span class="hljs-keyword">double</span> x_center, <span class="hljs-keyword">double</span> y_center)</span> </span>&#123;
+        <span class="hljs-keyword">this</span>.r = radius;
+        <span class="hljs-keyword">this</span>.x = x_center;
+        <span class="hljs-keyword">this</span>.y = y_center;
     &#125;
     
-    public double[] randPoint() &#123;
-        double pointX = x - r + Math.random() * 2 * r;
-        double pointY = y - r + Math.random() * 2 * r;
-        while((pointX - x)*(pointX - x) + (pointY - y)*(pointY - y) &gt;= r*r) &#123;
-            pointX = x - r + Math.random() * 2 * r;
-            pointY = y - r + Math.random() * 2 * r;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span>[] randPoint() &#123;
+        <span class="hljs-keyword">double</span> pointX = x - r + Math.random() * <span class="hljs-number">2</span> * r;
+        <span class="hljs-keyword">double</span> pointY = y - r + Math.random() * <span class="hljs-number">2</span> * r;
+        <span class="hljs-keyword">while</span>((pointX - x)*(pointX - x) + (pointY - y)*(pointY - y) &gt;= r*r) &#123;
+            pointX = x - r + Math.random() * <span class="hljs-number">2</span> * r;
+            pointY = y - r + Math.random() * <span class="hljs-number">2</span> * r;
         &#125;
-        return new double[]&#123;pointX, pointY&#125;;
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">double</span>[]&#123;pointX, pointY&#125;;
     &#125;
 &#125;
 
-/**
- * Your Solution object will be instantiated and called as such:
- * Solution obj = new Solution(radius, x_center, y_center);
- * double[] param_1 = obj.randPoint();
- */
-</code></pre>
+<span class="hljs-comment">/**</span>
+<span class="hljs-comment"> * Your Solution object will be instantiated and called as such:</span>
+<span class="hljs-comment"> * Solution obj = new Solution(radius, x_center, y_center);</span>
+<span class="hljs-comment"> * double[] param_1 = obj.randPoint();</span>
+<span class="hljs-comment"> */</span></code></pre>
 <br/>
 
 <h2 id="18-Wiggle-Subsequence"><a href="#18-Wiggle-Subsequence" class="headerlink" title="18. Wiggle Subsequence"></a>18. Wiggle Subsequence</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/wiggle-subsequence/">376. Wiggle Subsequence - LeetCode</a> <code>Medium</code></p>
@@ -680,43 +671,42 @@ class Solution &#123;
 <p>如果一个数组前后两个数之差，呈严格正负交错，则称之为摇摆序列。求给定数组内，其非连续子数组为摇摆序列的最大长度。</p>
 <p><strong>题目解答：</strong></p>
 <p>贪心法。画个图会很清晰，本题可以理解为求数组的极大值和极小值的总数，只需要遍历数组，计数所有拐点即可。</p>
-<pre><code class="java">class Solution &#123;
-    public int wiggleMaxLength(int[] nums) &#123;
-        int flag = 0, base = nums[0], ret = 1;
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">wiggleMaxLength</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] nums)</span> </span>&#123;
+        <span class="hljs-keyword">int</span> flag = <span class="hljs-number">0</span>, base = nums[<span class="hljs-number">0</span>], ret = <span class="hljs-number">1</span>;
         
-        for(int i = 1; i &lt; nums.length; i++) &#123;
-            if (flag == 0) &#123;
-                if (nums[i] &gt; base) &#123;
-                    flag = -1;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">1</span>; i &lt; nums.length; i++) &#123;
+            <span class="hljs-keyword">if</span> (flag == <span class="hljs-number">0</span>) &#123;
+                <span class="hljs-keyword">if</span> (nums[i] &gt; base) &#123;
+                    flag = -<span class="hljs-number">1</span>;
                     base = nums[i];
                     ret++;
-                &#125; else if (nums[i] &lt; base) &#123;
-                    flag = 1;
+                &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (nums[i] &lt; base) &#123;
+                    flag = <span class="hljs-number">1</span>;
                     base = nums[i];
                     ret++;
                 &#125;
-            &#125; else if (flag == 1) &#123;
-                if (nums[i] &gt; base) &#123;
-                    flag *= -1;
+            &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (flag == <span class="hljs-number">1</span>) &#123;
+                <span class="hljs-keyword">if</span> (nums[i] &gt; base) &#123;
+                    flag *= -<span class="hljs-number">1</span>;
                     base = nums[i];
                     ret++;
-                &#125; else &#123;
+                &#125; <span class="hljs-keyword">else</span> &#123;
                     base = nums[i];
                 &#125;
-            &#125; else &#123;
-                if (nums[i] &lt; base) &#123;
-                    flag *= -1;
+            &#125; <span class="hljs-keyword">else</span> &#123;
+                <span class="hljs-keyword">if</span> (nums[i] &lt; base) &#123;
+                    flag *= -<span class="hljs-number">1</span>;
                     base = nums[i];
                     ret++;
-                &#125; else &#123;
+                &#125; <span class="hljs-keyword">else</span> &#123;
                     base = nums[i];
                 &#125;
             &#125;
         &#125;
-        return ret;
+        <span class="hljs-keyword">return</span> ret;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="19-Keys-and-Rooms"><a href="#19-Keys-and-Rooms" class="headerlink" title="19. Keys and Rooms"></a>19. Keys and Rooms</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/keys-and-rooms/">841. Keys and Rooms</a> <code>Medium</code></p>
@@ -724,28 +714,27 @@ class Solution &#123;
 <p>现有 <code>0..N-1</code> 号房间和对应的钥匙，给出每间房间内具有的钥匙能打开哪些房间，当前在 0 号房间，判断是否能打开所有房间的门。</p>
 <p><strong>题目解答：</strong></p>
 <p>深度优先搜索：直接递归写法，深度优先搜索，只要注意不要重复搜索即可。</p>
-<pre><code class="java">class Solution &#123;
-    int[] visited;
-    int cnt;
-    public boolean canVisitAllRooms(List&lt;List&lt;Integer&gt;&gt; rooms) &#123;
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-keyword">int</span>[] visited;
+    <span class="hljs-keyword">int</span> cnt;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">canVisitAllRooms</span><span class="hljs-params">(List&lt;List&lt;Integer&gt;&gt; rooms)</span> </span>&#123;
         cnt = rooms.size();
-        visited = new int[rooms.size()];
-        visitRoom(rooms, 0);
-        return cnt == 0;
+        visited = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[rooms.size()];
+        visitRoom(rooms, <span class="hljs-number">0</span>);
+        <span class="hljs-keyword">return</span> cnt == <span class="hljs-number">0</span>;
     &#125;
     
-    private void visitRoom(List&lt;List&lt;Integer&gt;&gt; rooms, Integer room) &#123;
-        if (visited[room] == 1) return ;
-        else &#123;
-            visited[room] = 1;
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">visitRoom</span><span class="hljs-params">(List&lt;List&lt;Integer&gt;&gt; rooms, Integer room)</span> </span>&#123;
+        <span class="hljs-keyword">if</span> (visited[room] == <span class="hljs-number">1</span>) <span class="hljs-keyword">return</span> ;
+        <span class="hljs-keyword">else</span> &#123;
+            visited[room] = <span class="hljs-number">1</span>;
             cnt--;
-            for(int nextRoom : rooms.get(room)) &#123;
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> nextRoom : rooms.get(room)) &#123;
                 visitRoom(rooms, nextRoom);
             &#125;
         &#125;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="20-Design-Underground-System"><a href="#20-Design-Underground-System" class="headerlink" title="20. Design Underground System"></a>20. Design Underground System</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/design-underground-system/">1396. Design Underground System</a> <code>Medium</code></p>
@@ -753,44 +742,43 @@ class Solution &#123;
 <p>设计一个地下铁路系统，该系统能够按顺序录入某个用户在某个时间进入（checkIn）或离开（checkOut）某个站点，同时提供 getAverageTime 方法以计算某两个地点的平均花费时间。</p>
 <p><strong>题目解答：</strong></p>
 <p>朴素解法：用两个 Map 分别记录某个用户的当前进入站点的信息，和任意两个站点之间的总时间和人数。出站时更新相关时间/人数，并用此 Map 提供平均值计算。</p>
-<pre><code class="java">class UndergroundSystem &#123;
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">UndergroundSystem</span> </span>&#123;
     HashMap&lt;Integer, Pair&lt;String, Integer&gt;&gt; idMap;
     HashMap&lt;Pair&lt;String, String&gt;, Pair&lt;Integer, Integer&gt;&gt; travelMap;
 
-    public UndergroundSystem() &#123;
-        idMap = new HashMap&lt;&gt;();
-        travelMap = new HashMap&lt;&gt;();
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">UndergroundSystem</span><span class="hljs-params">()</span> </span>&#123;
+        idMap = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+        travelMap = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
     &#125;
     
-    public void checkIn(int id, String stationName, int t) &#123;
-        idMap.put(id, new Pair&lt;&gt;(stationName, t));
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">checkIn</span><span class="hljs-params">(<span class="hljs-keyword">int</span> id, String stationName, <span class="hljs-keyword">int</span> t)</span> </span>&#123;
+        idMap.put(id, <span class="hljs-keyword">new</span> Pair&lt;&gt;(stationName, t));
     &#125;
     
-    public void checkOut(int id, String stationName, int t) &#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">checkOut</span><span class="hljs-params">(<span class="hljs-keyword">int</span> id, String stationName, <span class="hljs-keyword">int</span> t)</span> </span>&#123;
         Pair&lt;String, Integer&gt; pair = idMap.get(id);
-        Pair&lt;String, String&gt; travel = new Pair&lt;&gt;(pair.getKey(), stationName);
+        Pair&lt;String, String&gt; travel = <span class="hljs-keyword">new</span> Pair&lt;&gt;(pair.getKey(), stationName);
         
-        Pair&lt;Integer, Integer&gt; data = travelMap.getOrDefault(travel, new Pair&lt;&gt;(0, 0));
+        Pair&lt;Integer, Integer&gt; data = travelMap.getOrDefault(travel, <span class="hljs-keyword">new</span> Pair&lt;&gt;(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>));
         travelMap.put(
             travel,
-            new Pair&lt;&gt;(data.getKey() + (t-pair.getValue()), data.getValue()+1)
+            <span class="hljs-keyword">new</span> Pair&lt;&gt;(data.getKey() + (t-pair.getValue()), data.getValue()+<span class="hljs-number">1</span>)
         );
     &#125;
     
-    public double getAverageTime(String startStation, String endStation) &#123;
-        Pair&lt;Integer, Integer&gt; data = travelMap.get(new Pair&lt;&gt;(startStation, endStation));
-        return data.getKey() * 1.0 / data.getValue();
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">double</span> <span class="hljs-title">getAverageTime</span><span class="hljs-params">(String startStation, String endStation)</span> </span>&#123;
+        Pair&lt;Integer, Integer&gt; data = travelMap.get(<span class="hljs-keyword">new</span> Pair&lt;&gt;(startStation, endStation));
+        <span class="hljs-keyword">return</span> data.getKey() * <span class="hljs-number">1.0</span> / data.getValue();
     &#125;
 &#125;
 
-/**
- * Your UndergroundSystem object will be instantiated and called as such:
- * UndergroundSystem obj = new UndergroundSystem();
- * obj.checkIn(id,stationName,t);
- * obj.checkOut(id,stationName,t);
- * double param_3 = obj.getAverageTime(startStation,endStation);
- */
-</code></pre>
+<span class="hljs-comment">/**</span>
+<span class="hljs-comment"> * Your UndergroundSystem object will be instantiated and called as such:</span>
+<span class="hljs-comment"> * UndergroundSystem obj = new UndergroundSystem();</span>
+<span class="hljs-comment"> * obj.checkIn(id,stationName,t);</span>
+<span class="hljs-comment"> * obj.checkOut(id,stationName,t);</span>
+<span class="hljs-comment"> * double param_3 = obj.getAverageTime(startStation,endStation);</span>
+<span class="hljs-comment"> */</span></code></pre>
 <br/>
 
 <h2 id="21-Reordered-Power-of-2"><a href="#21-Reordered-Power-of-2" class="headerlink" title="21. Reordered Power of 2"></a>21. Reordered Power of 2</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/reordered-power-of-2/">869. Reordered Power of 2</a> <code>Medium</code></p>
@@ -798,27 +786,26 @@ class Solution &#123;
 <p>给出一个整数，如果这个整数以任何顺序重排序（十进制分隔方式）后为 2 的倍数，则返回 true，否则返回 false。</p>
 <p><strong>题目解答：</strong></p>
 <p>将数字转换为每个数字的出现次数，并检查是否有 2 的倍数的格数字出现次数与之符合。</p>
-<pre><code class="java">class Solution &#123;
-    public boolean reorderedPowerOf2(int N) &#123;
-        int[] arr = process(N);
-        for(int i = 0; i &lt; 31; i++) &#123;
-            if (Arrays.equals(arr, process(1 &lt;&lt; i))) &#123;
-                return true;
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">boolean</span> <span class="hljs-title">reorderedPowerOf2</span><span class="hljs-params">(<span class="hljs-keyword">int</span> N)</span> </span>&#123;
+        <span class="hljs-keyword">int</span>[] arr = process(N);
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">31</span>; i++) &#123;
+            <span class="hljs-keyword">if</span> (Arrays.equals(arr, process(<span class="hljs-number">1</span> &lt;&lt; i))) &#123;
+                <span class="hljs-keyword">return</span> <span class="hljs-keyword">true</span>;
             &#125;
         &#125;
-        return false;
+        <span class="hljs-keyword">return</span> <span class="hljs-keyword">false</span>;
     &#125;
     
-    private int[] process(int n) &#123;
-        int[] cnt = new int[10];
-        while(n != 0) &#123;
-            cnt[n%10] ++;
-            n = n / 10;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[] process(<span class="hljs-keyword">int</span> n) &#123;
+        <span class="hljs-keyword">int</span>[] cnt = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">10</span>];
+        <span class="hljs-keyword">while</span>(n != <span class="hljs-number">0</span>) &#123;
+            cnt[n%<span class="hljs-number">10</span>] ++;
+            n = n / <span class="hljs-number">10</span>;
         &#125;
-        return cnt;
+        <span class="hljs-keyword">return</span> cnt;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="22-Vowel-Spellchecker"><a href="#22-Vowel-Spellchecker" class="headerlink" title="22. Vowel Spellchecker"></a>22. Vowel Spellchecker</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/vowel-spellchecker/">966. Vowel Spellchecker</a> <code>Medium</code></p>
@@ -832,46 +819,45 @@ class Solution &#123;
 </ul>
 <p><strong>题目解答：</strong></p>
 <p>使用 HashMap 存储以上三种优先级的单词关系即可。</p>
-<pre><code class="java">class Solution &#123;
-    public String[] spellchecker(String[] wordlist, String[] queries) &#123;
-        Set&lt;String&gt; sameSet = new HashSet&lt;&gt;();
-        Map&lt;String, String&gt; capMap = new HashMap&lt;&gt;(), vowelMap = new HashMap&lt;&gt;();
-        for(String word : wordlist) &#123;
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-keyword">public</span> String[] spellchecker(String[] wordlist, String[] queries) &#123;
+        Set&lt;String&gt; sameSet = <span class="hljs-keyword">new</span> HashSet&lt;&gt;();
+        Map&lt;String, String&gt; capMap = <span class="hljs-keyword">new</span> HashMap&lt;&gt;(), vowelMap = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+        <span class="hljs-keyword">for</span>(String word : wordlist) &#123;
             sameSet.add(word);
 
             String lowerString = word.toLowerCase();
-            if (!capMap.containsKey(lowerString)) &#123;
+            <span class="hljs-keyword">if</span> (!capMap.containsKey(lowerString)) &#123;
                 capMap.put(lowerString, word);
             &#125;
-            String vowelString = lowerString.replaceAll(&quot;[aeiou]&quot;, &quot;?&quot;);
-            if (!vowelMap.containsKey(vowelString)) &#123;
+            String vowelString = lowerString.replaceAll(<span class="hljs-string">&quot;[aeiou]&quot;</span>, <span class="hljs-string">&quot;?&quot;</span>);
+            <span class="hljs-keyword">if</span> (!vowelMap.containsKey(vowelString)) &#123;
                 vowelMap.put(vowelString, word);
             &#125;
         &#125;
 
-        String[] ret = new String[queries.length];
-        for(int i = 0; i &lt; queries.length; i++) &#123;
+        String[] ret = <span class="hljs-keyword">new</span> String[queries.length];
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; queries.length; i++) &#123;
             String query = queries[i];
-            if (sameSet.contains(query)) &#123;
+            <span class="hljs-keyword">if</span> (sameSet.contains(query)) &#123;
                 ret[i] = query;
-                continue;
+                <span class="hljs-keyword">continue</span>;
             &#125;
             String lowerString = query.toLowerCase();
-            if (capMap.containsKey(lowerString)) &#123;
+            <span class="hljs-keyword">if</span> (capMap.containsKey(lowerString)) &#123;
                 ret[i] = capMap.get(lowerString);
-                continue;
+                <span class="hljs-keyword">continue</span>;
             &#125;
-            String vowelString = lowerString.replaceAll(&quot;[aeiou]&quot;, &quot;?&quot;);
-            if (vowelMap.containsKey(vowelString)) &#123;
+            String vowelString = lowerString.replaceAll(<span class="hljs-string">&quot;[aeiou]&quot;</span>, <span class="hljs-string">&quot;?&quot;</span>);
+            <span class="hljs-keyword">if</span> (vowelMap.containsKey(vowelString)) &#123;
                 ret[i] = vowelMap.get(vowelString);
-                continue;
+                <span class="hljs-keyword">continue</span>;
             &#125;
-            ret[i] = &quot;&quot;;
+            ret[i] = <span class="hljs-string">&quot;&quot;</span>;
         &#125;
-        return ret;
+        <span class="hljs-keyword">return</span> ret;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="23-3Sum-With-Multiplicity"><a href="#23-3Sum-With-Multiplicity" class="headerlink" title="23. 3Sum With Multiplicity"></a>23. 3Sum With Multiplicity</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/3sum-with-multiplicity/">923. 3Sum With Multiplicity</a> <code>Medium</code></p>
@@ -879,40 +865,39 @@ class Solution &#123;
 <p>在给定数组内，找到 i,j,k 三个值满足 <code>i &lt; j &lt; k</code> 且 <code>arr[i] + arr[j] + arr[k] == target</code>，求解的总数，并对 $10^9 + 7$ 取余。</p>
 <p><strong>题目解答：</strong></p>
 <p>三指针扫描：对每个 i 尝试找 j、k 的取值，扫描所有组合。</p>
-<pre><code class="java">class Solution &#123;
-    public int threeSumMulti(int[] arr, int target) &#123;
-        long ret = 0;
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">threeSumMulti</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] arr, <span class="hljs-keyword">int</span> target)</span> </span>&#123;
+        <span class="hljs-keyword">long</span> ret = <span class="hljs-number">0</span>;
         Arrays.sort(arr);
-        for(int i = 0; i &lt; arr.length; i++) &#123;
-            int t = target - arr[i], j = i+1, k = arr.length-1;
-            while(j &lt; k) &#123;
-                if (arr[j] + arr[k] &gt; t) &#123;
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; arr.length; i++) &#123;
+            <span class="hljs-keyword">int</span> t = target - arr[i], j = i+<span class="hljs-number">1</span>, k = arr.length-<span class="hljs-number">1</span>;
+            <span class="hljs-keyword">while</span>(j &lt; k) &#123;
+                <span class="hljs-keyword">if</span> (arr[j] + arr[k] &gt; t) &#123;
                     k--;
-                &#125; else if (arr[j] + arr[k] &lt; t) &#123;
+                &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (arr[j] + arr[k] &lt; t) &#123;
                     j++;
-                &#125; else if (arr[j] != arr[k]) &#123;
-                    int l = 1, r = 1;
-                    while(j+1 &lt; k &amp;&amp; arr[j] == arr[j+1]) &#123;
+                &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (arr[j] != arr[k]) &#123;
+                    <span class="hljs-keyword">int</span> l = <span class="hljs-number">1</span>, r = <span class="hljs-number">1</span>;
+                    <span class="hljs-keyword">while</span>(j+<span class="hljs-number">1</span> &lt; k &amp;&amp; arr[j] == arr[j+<span class="hljs-number">1</span>]) &#123;
                         l++;
                         j++;
                     &#125;
-                    while(j &lt; k-1 &amp;&amp; arr[k-1] == arr[k]) &#123;
+                    <span class="hljs-keyword">while</span>(j &lt; k-<span class="hljs-number">1</span> &amp;&amp; arr[k-<span class="hljs-number">1</span>] == arr[k]) &#123;
                         r++;
                         k--;
                     &#125;
-                    ret = (ret + l * r) % 1000000007;
+                    ret = (ret + l * r) % <span class="hljs-number">1000000007</span>;
                     j++;
                     k--;
-                &#125; else &#123;
-                    ret = (ret + ((k-j+1) * (k-j) / 2)) % 1000000007;
-                    break;
+                &#125; <span class="hljs-keyword">else</span> &#123;
+                    ret = (ret + ((k-j+<span class="hljs-number">1</span>) * (k-j) / <span class="hljs-number">2</span>)) % <span class="hljs-number">1000000007</span>;
+                    <span class="hljs-keyword">break</span>;
                 &#125;  
             &#125;
         &#125;
-        return (int) ret;
+        <span class="hljs-keyword">return</span> (<span class="hljs-keyword">int</span>) ret;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="24-Advantage-Shuffle"><a href="#24-Advantage-Shuffle" class="headerlink" title="24. Advantage Shuffle"></a>24. Advantage Shuffle</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/advantage-shuffle/">870. Advantage Shuffle</a> <code>Medium</code></p>
@@ -920,37 +905,36 @@ class Solution &#123;
 <p>给出 A、B 两个长度相等的数组，返回 A 的任意重排序结果（如有多个解），使之 A、B 在所有索引位置上 <code>A[i] &gt; B[i]</code> 的数量最多。</p>
 <p><strong>题目解答：</strong></p>
 <p>对 B 数组中每个值，按从小到大的顺序，取 A 数组中尽量小的但大于 B 数组对应值的值即可。</p>
-<pre><code class="java">class Solution &#123;
-    public int[] advantageCount(int[] A, int[] B) &#123;
-        int[] Acopy = new int[A.length], Bcopy = new int[B.length];
-        System.arraycopy(A, 0, Acopy, 0, A.length);
-        System.arraycopy(B, 0, Bcopy, 0, B.length);
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] advantageCount(<span class="hljs-keyword">int</span>[] A, <span class="hljs-keyword">int</span>[] B) &#123;
+        <span class="hljs-keyword">int</span>[] Acopy = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[A.length], Bcopy = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[B.length];
+        System.arraycopy(A, <span class="hljs-number">0</span>, Acopy, <span class="hljs-number">0</span>, A.length);
+        System.arraycopy(B, <span class="hljs-number">0</span>, Bcopy, <span class="hljs-number">0</span>, B.length);
         Arrays.sort(Acopy);
         Arrays.sort(Bcopy);
 
-        Map&lt;Integer, List&lt;Integer&gt;&gt; map = new HashMap&lt;&gt;();
-        for(int i = 0, l = 0, r = B.length - 1; i &lt; Acopy.length; i++) &#123;
+        Map&lt;Integer, List&lt;Integer&gt;&gt; map = <span class="hljs-keyword">new</span> HashMap&lt;&gt;();
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>, l = <span class="hljs-number">0</span>, r = B.length - <span class="hljs-number">1</span>; i &lt; Acopy.length; i++) &#123;
 
-            if (Acopy[i] &gt; Bcopy[l]) &#123;
-                List&lt;Integer&gt; list = map.getOrDefault(Bcopy[l], new ArrayList&lt;&gt;());
+            <span class="hljs-keyword">if</span> (Acopy[i] &gt; Bcopy[l]) &#123;
+                List&lt;Integer&gt; list = map.getOrDefault(Bcopy[l], <span class="hljs-keyword">new</span> ArrayList&lt;&gt;());
                 list.add(Acopy[i]);
                 map.put(Bcopy[l++], list);
-            &#125; else &#123;
-                List&lt;Integer&gt; list = map.getOrDefault(Bcopy[r], new ArrayList&lt;&gt;());
+            &#125; <span class="hljs-keyword">else</span> &#123;
+                List&lt;Integer&gt; list = map.getOrDefault(Bcopy[r], <span class="hljs-keyword">new</span> ArrayList&lt;&gt;());
                 list.add(Acopy[i]);
                 map.put(Bcopy[r--], list);
             &#125;
         &#125;
 
-        for(int i = 0; i &lt; Acopy.length; i++) &#123;
-            List&lt;Integer&gt; list = map.getOrDefault(B[i], new ArrayList&lt;&gt;());
-            A[i] = list.get(list.size()-1);
-            list.remove(list.size()-1);
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; Acopy.length; i++) &#123;
+            List&lt;Integer&gt; list = map.getOrDefault(B[i], <span class="hljs-keyword">new</span> ArrayList&lt;&gt;());
+            A[i] = list.get(list.size()-<span class="hljs-number">1</span>);
+            list.remove(list.size()-<span class="hljs-number">1</span>);
         &#125;
-        return A;
+        <span class="hljs-keyword">return</span> A;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="25-Pacific-Atlantic-Water-Flow"><a href="#25-Pacific-Atlantic-Water-Flow" class="headerlink" title="25. Pacific Atlantic Water Flow"></a>25. Pacific Atlantic Water Flow</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/pacific-atlantic-water-flow/">417. Pacific Atlantic Water Flow</a> <code>Medium</code></p>
@@ -958,68 +942,67 @@ class Solution &#123;
 <p>给出一个正数二维数组，数组中的值表示该位置的高度，水流可以从某个位置以上下左右方向流向高度相等或更低的相邻位置。已知在数组左侧和上测是河水 A，右侧和下侧是河水 B，求在哪些坐标放水，可以使水同时流向河水 A 和河水 B。（返回坐标不要求顺序）</p>
 <p><strong>题目解答：</strong></p>
 <p>宽度优先搜索：沿着左右两个方向分别进行一轮深度优先搜索，各自找到可以流向河水 A、B 的坐标，再找并集即可。</p>
-<pre><code class="java">class Solution &#123;
-    private int n, m;
-    public List&lt;List&lt;Integer&gt;&gt; pacificAtlantic(int[][] matrix) &#123;
-        if (matrix.length == 0 || matrix[0].length == 0) &#123;
-            return Collections.emptyList();
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> n, m;
+    <span class="hljs-keyword">public</span> List&lt;List&lt;Integer&gt;&gt; pacificAtlantic(<span class="hljs-keyword">int</span>[][] matrix) &#123;
+        <span class="hljs-keyword">if</span> (matrix.length == <span class="hljs-number">0</span> || matrix[<span class="hljs-number">0</span>].length == <span class="hljs-number">0</span>) &#123;
+            <span class="hljs-keyword">return</span> Collections.emptyList();
         &#125;
         n = matrix.length;
-        m = matrix[0].length;
+        m = matrix[<span class="hljs-number">0</span>].length;
 
-        boolean[][] lArea = new boolean[n][m], rArea = new boolean[n][m];
-        Queue&lt;Pair&lt;Integer, Integer&gt;&gt; queue = new LinkedList&lt;&gt;();
-        for(int i = 0; i &lt; n; i++) &#123;
-            for(int j = 0; j &lt; m; j++) &#123;
-                if (i == 0 || j == 0) &#123;
-                    lArea[i][j] = true;
-                    queue.offer(new Pair(i, j));
+        <span class="hljs-keyword">boolean</span>[][] lArea = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[n][m], rArea = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[n][m];
+        Queue&lt;Pair&lt;Integer, Integer&gt;&gt; queue = <span class="hljs-keyword">new</span> LinkedList&lt;&gt;();
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; m; j++) &#123;
+                <span class="hljs-keyword">if</span> (i == <span class="hljs-number">0</span> || j == <span class="hljs-number">0</span>) &#123;
+                    lArea[i][j] = <span class="hljs-keyword">true</span>;
+                    queue.offer(<span class="hljs-keyword">new</span> Pair(i, j));
                 &#125;                
             &#125;
         &#125;
         process(matrix, queue, lArea);
 
 
-        for(int i = 0; i &lt; n; i++) &#123;
-            for(int j = 0; j &lt; m; j++) &#123;
-                if (i == n-1 || j == m-1) &#123;
-                    rArea[i][j] = true;
-                    queue.offer(new Pair(i, j));
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; m; j++) &#123;
+                <span class="hljs-keyword">if</span> (i == n-<span class="hljs-number">1</span> || j == m-<span class="hljs-number">1</span>) &#123;
+                    rArea[i][j] = <span class="hljs-keyword">true</span>;
+                    queue.offer(<span class="hljs-keyword">new</span> Pair(i, j));
                 &#125;                
             &#125;
         &#125;
         process(matrix, queue, rArea);
 
-        List&lt;List&lt;Integer&gt;&gt; ret = new ArrayList&lt;&gt;();
-        for(int i = 0; i &lt; n; i++) &#123;
-            for(int j = 0; j &lt; m; j++) &#123;
-                if (lArea[i][j] &amp;&amp; rArea[i][j]) &#123;
+        List&lt;List&lt;Integer&gt;&gt; ret = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; n; i++) &#123;
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; m; j++) &#123;
+                <span class="hljs-keyword">if</span> (lArea[i][j] &amp;&amp; rArea[i][j]) &#123;
                     ret.add(Arrays.asList(i, j));
                 &#125;
             &#125;
         &#125;
-        return ret;
+        <span class="hljs-keyword">return</span> ret;
     &#125;
 
-    private int[][] flows = new int[][]&#123;&#123;-1, 0&#125;, &#123;0, -1&#125;, &#123;1, 0&#125;, &#123;0, 1&#125;&#125;;
-    private void process(int[][] matrix, Queue&lt;Pair&lt;Integer, Integer&gt;&gt; queue, boolean[][] visited) &#123;
-        while(!queue.isEmpty()) &#123;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[][] flows = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[][]&#123;&#123;-<span class="hljs-number">1</span>, <span class="hljs-number">0</span>&#125;, &#123;<span class="hljs-number">0</span>, -<span class="hljs-number">1</span>&#125;, &#123;<span class="hljs-number">1</span>, <span class="hljs-number">0</span>&#125;, &#123;<span class="hljs-number">0</span>, <span class="hljs-number">1</span>&#125;&#125;;
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">process</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] matrix, Queue&lt;Pair&lt;Integer, Integer&gt;&gt; queue, <span class="hljs-keyword">boolean</span>[][] visited)</span> </span>&#123;
+        <span class="hljs-keyword">while</span>(!queue.isEmpty()) &#123;
             Pair&lt;Integer, Integer&gt; pair = queue.poll();
-            int i = pair.getKey(), j = pair.getValue();
-            visited[i][j] = true;
+            <span class="hljs-keyword">int</span> i = pair.getKey(), j = pair.getValue();
+            visited[i][j] = <span class="hljs-keyword">true</span>;
 
-            for(int[] flow : flows) &#123;
-                int nextI = i + flow[0], nextJ = j + flow[1];
-                if (0 &lt;= nextI &amp;&amp; nextI &lt; n &amp;&amp; 0 &lt;= nextJ &amp;&amp; nextJ &lt; m &amp;&amp; 
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span>[] flow : flows) &#123;
+                <span class="hljs-keyword">int</span> nextI = i + flow[<span class="hljs-number">0</span>], nextJ = j + flow[<span class="hljs-number">1</span>];
+                <span class="hljs-keyword">if</span> (<span class="hljs-number">0</span> &lt;= nextI &amp;&amp; nextI &lt; n &amp;&amp; <span class="hljs-number">0</span> &lt;= nextJ &amp;&amp; nextJ &lt; m &amp;&amp; 
                     !visited[nextI][nextJ] &amp;&amp; matrix[nextI][nextJ] &gt;= matrix[i][j]) &#123;
-                    visited[nextI][nextJ] = true;
-                    queue.offer(new Pair(nextI, nextJ));
+                    visited[nextI][nextJ] = <span class="hljs-keyword">true</span>;
+                    queue.offer(<span class="hljs-keyword">new</span> Pair(nextI, nextJ));
                 &#125;
             &#125;
         &#125;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="26-Word-Subsets"><a href="#26-Word-Subsets" class="headerlink" title="26. Word Subsets"></a>26. Word Subsets</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/word-subsets/">916. Word Subsets</a> <code>Medium</code></p>
@@ -1027,41 +1010,40 @@ class Solution &#123;
 <p>定义如果 a 字符串包含 b 中的所有字符（包括多次，即 a 中每个字符的次数必须大于等于 b 中的对应字符次数），则 b 是 a 的子集。返回数组 A 中，数组 B 中所有字符串均是它的子集的字符串（不要求返回顺序）。</p>
 <p><strong>题目解答：</strong></p>
 <p>统计 B 数组中每个字符的最大字符出现次数，如果某个字符串所有字符串的出现次数均大于等于该次数即认为是符合条件的。</p>
-<pre><code class="java">class Solution &#123;
-    public List&lt;String&gt; wordSubsets(String[] A, String[] B) &#123;
-        int[] bArr = new int[27], arr = new int[27];;
-        for(String b : B) &#123;
-            Arrays.fill(arr, 0);
-            for(char c : b.toCharArray()) &#123;
-                arr[c - &#39;a&#39;] += 1;
-                if (arr[c - &#39;a&#39;] &gt; bArr[c - &#39;a&#39;]) &#123;
-                    bArr[c - &#39;a&#39;] = arr[c - &#39;a&#39;];
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;String&gt; <span class="hljs-title">wordSubsets</span><span class="hljs-params">(String[] A, String[] B)</span> </span>&#123;
+        <span class="hljs-keyword">int</span>[] bArr = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">27</span>], arr = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">27</span>];;
+        <span class="hljs-keyword">for</span>(String b : B) &#123;
+            Arrays.fill(arr, <span class="hljs-number">0</span>);
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">char</span> c : b.toCharArray()) &#123;
+                arr[c - <span class="hljs-string">&#x27;a&#x27;</span>] += <span class="hljs-number">1</span>;
+                <span class="hljs-keyword">if</span> (arr[c - <span class="hljs-string">&#x27;a&#x27;</span>] &gt; bArr[c - <span class="hljs-string">&#x27;a&#x27;</span>]) &#123;
+                    bArr[c - <span class="hljs-string">&#x27;a&#x27;</span>] = arr[c - <span class="hljs-string">&#x27;a&#x27;</span>];
                 &#125;
             &#125;
         &#125;
 
-        List&lt;String&gt; ret = new ArrayList&lt;&gt;();
-        for(String a : A) &#123;
-            Arrays.fill(arr, 0);
-            for(char c : a.toCharArray()) &#123;
-                arr[c - &#39;a&#39;] += 1;
+        List&lt;String&gt; ret = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+        <span class="hljs-keyword">for</span>(String a : A) &#123;
+            Arrays.fill(arr, <span class="hljs-number">0</span>);
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">char</span> c : a.toCharArray()) &#123;
+                arr[c - <span class="hljs-string">&#x27;a&#x27;</span>] += <span class="hljs-number">1</span>;
             &#125;
 
-            boolean isUniversal = true;
-            for(int i = 0; i &lt; 27; i++) &#123;
-                if (arr[i] &lt; bArr[i]) &#123;
-                    isUniversal = false;
-                    break;
+            <span class="hljs-keyword">boolean</span> isUniversal = <span class="hljs-keyword">true</span>;
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">27</span>; i++) &#123;
+                <span class="hljs-keyword">if</span> (arr[i] &lt; bArr[i]) &#123;
+                    isUniversal = <span class="hljs-keyword">false</span>;
+                    <span class="hljs-keyword">break</span>;
                 &#125;
             &#125;
-            if (isUniversal) &#123;
+            <span class="hljs-keyword">if</span> (isUniversal) &#123;
                 ret.add(a);
             &#125;
         &#125;
-        return ret;
+        <span class="hljs-keyword">return</span> ret;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="27-Palindromic-Substrings"><a href="#27-Palindromic-Substrings" class="headerlink" title="27. Palindromic Substrings"></a>27. Palindromic Substrings</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/palindromic-substrings/">647. Palindromic Substrings</a> <code>Medium</code></p>
@@ -1069,46 +1051,45 @@ class Solution &#123;
 <p>求给定字符串内有多少个回文串，其中位置不同但内容相同的回文串视为不同的解。</p>
 <p><strong>题目解答：</strong></p>
 <p>使用 Manacher 解法，并处理 # 情况即可。</p>
-<pre><code class="java">class Solution &#123;
-    public int countSubstrings(String s) &#123;
-        StringBuilder sb = new StringBuilder(&quot;#&quot;);
-        for(char c : s.toCharArray()) &#123;
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">countSubstrings</span><span class="hljs-params">(String s)</span> </span>&#123;
+        StringBuilder sb = <span class="hljs-keyword">new</span> StringBuilder(<span class="hljs-string">&quot;#&quot;</span>);
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">char</span> c : s.toCharArray()) &#123;
             sb.append(c);
-            sb.append(&quot;#&quot;);
+            sb.append(<span class="hljs-string">&quot;#&quot;</span>);
         &#125;
         s = sb.toString();
 
-        int right = -1, j = -1, ret = 0;
-        int[] arr = new int[s.length()];
-        for(int i = 0; i &lt; s.length(); i++) &#123;
-            int len;
-            if (i &lt; right) &#123;
-                int minLen = Math.min(arr[2*j-i], right-i);
+        <span class="hljs-keyword">int</span> right = -<span class="hljs-number">1</span>, j = -<span class="hljs-number">1</span>, ret = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">int</span>[] arr = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[s.length()];
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; s.length(); i++) &#123;
+            <span class="hljs-keyword">int</span> len;
+            <span class="hljs-keyword">if</span> (i &lt; right) &#123;
+                <span class="hljs-keyword">int</span> minLen = Math.min(arr[<span class="hljs-number">2</span>*j-i], right-i);
                 len = expand(s, i, minLen);
-            &#125; else &#123;
-                len = expand(s, i, 0);
+            &#125; <span class="hljs-keyword">else</span> &#123;
+                len = expand(s, i, <span class="hljs-number">0</span>);
             &#125;
             arr[i] = len;
 
-            if (i + len &gt; right) &#123;
+            <span class="hljs-keyword">if</span> (i + len &gt; right) &#123;
                 right = i + len;
                 j = i;
             &#125;
-            ret += s.charAt(i) == &#39;#&#39; ? arr[i]/2 : arr[i]/2+1;
+            ret += s.charAt(i) == <span class="hljs-string">&#x27;#&#x27;</span> ? arr[i]/<span class="hljs-number">2</span> : arr[i]/<span class="hljs-number">2</span>+<span class="hljs-number">1</span>;
         &#125;
-        return ret;
+        <span class="hljs-keyword">return</span> ret;
     &#125;
 
-    private int expand(String s, int i, int len) &#123;
-        for(len=len+1; i-len &gt;= 0 &amp;&amp; i+len &lt; s.length(); len++) &#123;
-            if (s.charAt(i-len) != s.charAt(i+len)) &#123;
-                return len-1;
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">expand</span><span class="hljs-params">(String s, <span class="hljs-keyword">int</span> i, <span class="hljs-keyword">int</span> len)</span> </span>&#123;
+        <span class="hljs-keyword">for</span>(len=len+<span class="hljs-number">1</span>; i-len &gt;= <span class="hljs-number">0</span> &amp;&amp; i+len &lt; s.length(); len++) &#123;
+            <span class="hljs-keyword">if</span> (s.charAt(i-len) != s.charAt(i+len)) &#123;
+                <span class="hljs-keyword">return</span> len-<span class="hljs-number">1</span>;
             &#125;
         &#125;
-        return len-1;
+        <span class="hljs-keyword">return</span> len-<span class="hljs-number">1</span>;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="28-Reconstruct-Original-Digits-from-English"><a href="#28-Reconstruct-Original-Digits-from-English" class="headerlink" title="28. Reconstruct Original Digits from English"></a>28. Reconstruct Original Digits from English</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/reconstruct-original-digits-from-english/">423. Reconstruct Original Digits from English</a> <code>Medium</code></p>
@@ -1116,41 +1097,40 @@ class Solution &#123;
 <p>给出由 0-9 的英语单词组成，但顺着被打乱的字符串。（保证输入有效）</p>
 <p><strong>题目解答：</strong></p>
 <p>直接找数组规律，比如 zero 的出现次数就是 z 字符的出现次数。</p>
-<pre><code class="java">class Solution &#123;
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
 
-    public String originalDigits(String s) &#123;
-        int[] letterCnt = new int[27];
-        for(char c : s.toCharArray()) &#123;
-            letterCnt[c - &#39;a&#39;] += 1;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> String <span class="hljs-title">originalDigits</span><span class="hljs-params">(String s)</span> </span>&#123;
+        <span class="hljs-keyword">int</span>[] letterCnt = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">27</span>];
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">char</span> c : s.toCharArray()) &#123;
+            letterCnt[c - <span class="hljs-string">&#x27;a&#x27;</span>] += <span class="hljs-number">1</span>;
         &#125;
 
-        int[] numsCnt = new int[10];
-        numsCnt[0] = letterCnt[&#39;z&#39;-&#39;a&#39;];    // zero = &#39;z&#39;
-        numsCnt[1] = letterCnt[&#39;o&#39;-&#39;a&#39;] - letterCnt[&#39;z&#39;-&#39;a&#39;] - letterCnt[&#39;w&#39;-&#39;a&#39;] - letterCnt[&#39;u&#39;-&#39;a&#39;];
-                                            // one  = &#39;o&#39; - &#39;z&#39; - &#39;w&#39; - &#39;u&#39;
-        numsCnt[2] = letterCnt[&#39;w&#39;-&#39;a&#39;];    // two  = &#39;w&#39;
-        numsCnt[3] = letterCnt[&#39;r&#39;-&#39;a&#39;] - letterCnt[&#39;u&#39;-&#39;a&#39;] - letterCnt[&#39;z&#39;-&#39;a&#39;];
-                                            // three= &#39;r&#39; - &#39;u&#39; - &#39;z&#39;
-        numsCnt[4] = letterCnt[&#39;u&#39;-&#39;a&#39;];    // four = &#39;u&#39;
-        numsCnt[5] = letterCnt[&#39;f&#39;-&#39;a&#39;] - letterCnt[&#39;u&#39;-&#39;a&#39;];
-                                            // five = &#39;f&#39; - &#39;u&#39;
-        numsCnt[6] = letterCnt[&#39;x&#39;-&#39;a&#39;];    // six  = &#39;x&#39;
-        numsCnt[7] = letterCnt[&#39;s&#39;-&#39;a&#39;] - letterCnt[&#39;x&#39;-&#39;a&#39;];
-                                            // seven= &#39;s&#39; - &#39;x&#39;
-        numsCnt[8] = letterCnt[&#39;g&#39;-&#39;a&#39;];    // eight= &#39;g&#39;
-        numsCnt[9] = letterCnt[&#39;i&#39;-&#39;a&#39;] - letterCnt[&#39;f&#39;-&#39;a&#39;] + letterCnt[&#39;u&#39;-&#39;a&#39;] - letterCnt[&#39;x&#39;-&#39;a&#39;] - letterCnt[&#39;g&#39;-&#39;a&#39;];
-                                            // nine = &#39;i&#39; - (&#39;f&#39; - &#39;u&#39;) - &#39;x&#39; - &#39;g&#39;
+        <span class="hljs-keyword">int</span>[] numsCnt = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">10</span>];
+        numsCnt[<span class="hljs-number">0</span>] = letterCnt[<span class="hljs-string">&#x27;z&#x27;</span>-<span class="hljs-string">&#x27;a&#x27;</span>];    <span class="hljs-comment">// zero = &#x27;z&#x27;</span>
+        numsCnt[<span class="hljs-number">1</span>] = letterCnt[<span class="hljs-string">&#x27;o&#x27;</span>-<span class="hljs-string">&#x27;a&#x27;</span>] - letterCnt[<span class="hljs-string">&#x27;z&#x27;</span>-<span class="hljs-string">&#x27;a&#x27;</span>] - letterCnt[<span class="hljs-string">&#x27;w&#x27;</span>-<span class="hljs-string">&#x27;a&#x27;</span>] - letterCnt[<span class="hljs-string">&#x27;u&#x27;</span>-<span class="hljs-string">&#x27;a&#x27;</span>];
+                                            <span class="hljs-comment">// one  = &#x27;o&#x27; - &#x27;z&#x27; - &#x27;w&#x27; - &#x27;u&#x27;</span>
+        numsCnt[<span class="hljs-number">2</span>] = letterCnt[<span class="hljs-string">&#x27;w&#x27;</span>-<span class="hljs-string">&#x27;a&#x27;</span>];    <span class="hljs-comment">// two  = &#x27;w&#x27;</span>
+        numsCnt[<span class="hljs-number">3</span>] = letterCnt[<span class="hljs-string">&#x27;r&#x27;</span>-<span class="hljs-string">&#x27;a&#x27;</span>] - letterCnt[<span class="hljs-string">&#x27;u&#x27;</span>-<span class="hljs-string">&#x27;a&#x27;</span>] - letterCnt[<span class="hljs-string">&#x27;z&#x27;</span>-<span class="hljs-string">&#x27;a&#x27;</span>];
+                                            <span class="hljs-comment">// three= &#x27;r&#x27; - &#x27;u&#x27; - &#x27;z&#x27;</span>
+        numsCnt[<span class="hljs-number">4</span>] = letterCnt[<span class="hljs-string">&#x27;u&#x27;</span>-<span class="hljs-string">&#x27;a&#x27;</span>];    <span class="hljs-comment">// four = &#x27;u&#x27;</span>
+        numsCnt[<span class="hljs-number">5</span>] = letterCnt[<span class="hljs-string">&#x27;f&#x27;</span>-<span class="hljs-string">&#x27;a&#x27;</span>] - letterCnt[<span class="hljs-string">&#x27;u&#x27;</span>-<span class="hljs-string">&#x27;a&#x27;</span>];
+                                            <span class="hljs-comment">// five = &#x27;f&#x27; - &#x27;u&#x27;</span>
+        numsCnt[<span class="hljs-number">6</span>] = letterCnt[<span class="hljs-string">&#x27;x&#x27;</span>-<span class="hljs-string">&#x27;a&#x27;</span>];    <span class="hljs-comment">// six  = &#x27;x&#x27;</span>
+        numsCnt[<span class="hljs-number">7</span>] = letterCnt[<span class="hljs-string">&#x27;s&#x27;</span>-<span class="hljs-string">&#x27;a&#x27;</span>] - letterCnt[<span class="hljs-string">&#x27;x&#x27;</span>-<span class="hljs-string">&#x27;a&#x27;</span>];
+                                            <span class="hljs-comment">// seven= &#x27;s&#x27; - &#x27;x&#x27;</span>
+        numsCnt[<span class="hljs-number">8</span>] = letterCnt[<span class="hljs-string">&#x27;g&#x27;</span>-<span class="hljs-string">&#x27;a&#x27;</span>];    <span class="hljs-comment">// eight= &#x27;g&#x27;</span>
+        numsCnt[<span class="hljs-number">9</span>] = letterCnt[<span class="hljs-string">&#x27;i&#x27;</span>-<span class="hljs-string">&#x27;a&#x27;</span>] - letterCnt[<span class="hljs-string">&#x27;f&#x27;</span>-<span class="hljs-string">&#x27;a&#x27;</span>] + letterCnt[<span class="hljs-string">&#x27;u&#x27;</span>-<span class="hljs-string">&#x27;a&#x27;</span>] - letterCnt[<span class="hljs-string">&#x27;x&#x27;</span>-<span class="hljs-string">&#x27;a&#x27;</span>] - letterCnt[<span class="hljs-string">&#x27;g&#x27;</span>-<span class="hljs-string">&#x27;a&#x27;</span>];
+                                            <span class="hljs-comment">// nine = &#x27;i&#x27; - (&#x27;f&#x27; - &#x27;u&#x27;) - &#x27;x&#x27; - &#x27;g&#x27;</span>
 
-        StringBuilder sb = new StringBuilder();
-        for(int i = 0; i &lt; 10; i++) &#123;
-            for(int j = 0; j &lt; numsCnt[i]; j++) &#123;
+        StringBuilder sb = <span class="hljs-keyword">new</span> StringBuilder();
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) &#123;
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; numsCnt[i]; j++) &#123;
                 sb.append(i);
             &#125;
         &#125;
-        return sb.toString();
+        <span class="hljs-keyword">return</span> sb.toString();
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="29-Flip-Binary-Tree-To-Match-Preorder-Traversal"><a href="#29-Flip-Binary-Tree-To-Match-Preorder-Traversal" class="headerlink" title="29. Flip Binary Tree To Match Preorder Traversal"></a>29. Flip Binary Tree To Match Preorder Traversal</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/flip-binary-tree-to-match-preorder-traversal/">971. Flip Binary Tree To Match Preorder Traversal</a> <code>Medium</code></p>
@@ -1159,54 +1139,53 @@ class Solution &#123;
 <p><strong>题目解答：</strong></p>
 <p>因为是先序优先遍历，只需要按照要求深度优先尝试匹配即可。</p>
 <p>以下解法参考了 LeetCode 官方题解，最早的解法判断条件有些绕，且实际上并不需要考虑真的交换节点。</p>
-<pre><code class="java">/**
- * Definition for a binary tree node.
- * public class TreeNode &#123;
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() &#123;&#125;
- *     TreeNode(int val) &#123; this.val = val; &#125;
- *     TreeNode(int val, TreeNode left, TreeNode right) &#123;
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     &#125;
- * &#125;
- */
-class Solution &#123;
-    private List&lt;Integer&gt; ans = new ArrayList&lt;&gt;();
-    private boolean isFailed = false;
-    private int i = 0;
+<pre><code class="hljs java"><span class="hljs-comment">/**</span>
+<span class="hljs-comment"> * Definition for a binary tree node.</span>
+<span class="hljs-comment"> * public class TreeNode &#123;</span>
+<span class="hljs-comment"> *     int val;</span>
+<span class="hljs-comment"> *     TreeNode left;</span>
+<span class="hljs-comment"> *     TreeNode right;</span>
+<span class="hljs-comment"> *     TreeNode() &#123;&#125;</span>
+<span class="hljs-comment"> *     TreeNode(int val) &#123; this.val = val; &#125;</span>
+<span class="hljs-comment"> *     TreeNode(int val, TreeNode left, TreeNode right) &#123;</span>
+<span class="hljs-comment"> *         this.val = val;</span>
+<span class="hljs-comment"> *         this.left = left;</span>
+<span class="hljs-comment"> *         this.right = right;</span>
+<span class="hljs-comment"> *     &#125;</span>
+<span class="hljs-comment"> * &#125;</span>
+<span class="hljs-comment"> */</span>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-keyword">private</span> List&lt;Integer&gt; ans = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">boolean</span> isFailed = <span class="hljs-keyword">false</span>;
+    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>;
 
-    public List&lt;Integer&gt; flipMatchVoyage(TreeNode root, int[] voyage) &#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> List&lt;Integer&gt; <span class="hljs-title">flipMatchVoyage</span><span class="hljs-params">(TreeNode root, <span class="hljs-keyword">int</span>[] voyage)</span> </span>&#123;
         matchs(root, voyage);
-        return isFailed ? Arrays.asList(-1) : ans;
+        <span class="hljs-keyword">return</span> isFailed ? Arrays.asList(-<span class="hljs-number">1</span>) : ans;
     &#125;
 
-    private void matchs(TreeNode node, int[] voyage) &#123;
-        if (node == null) return ;
+    <span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">matchs</span><span class="hljs-params">(TreeNode node, <span class="hljs-keyword">int</span>[] voyage)</span> </span>&#123;
+        <span class="hljs-keyword">if</span> (node == <span class="hljs-keyword">null</span>) <span class="hljs-keyword">return</span> ;
 
-        if (node.val != voyage[i++]) &#123;
-            isFailed = true;
-            return ;
+        <span class="hljs-keyword">if</span> (node.val != voyage[i++]) &#123;
+            isFailed = <span class="hljs-keyword">true</span>;
+            <span class="hljs-keyword">return</span> ;
         &#125;
 
-        if (node.left == null &amp;&amp; node.right == null) &#123;
-            return ;
+        <span class="hljs-keyword">if</span> (node.left == <span class="hljs-keyword">null</span> &amp;&amp; node.right == <span class="hljs-keyword">null</span>) &#123;
+            <span class="hljs-keyword">return</span> ;
         &#125;
 
-        if (node.left != null &amp;&amp; node.left.val != voyage[i]) &#123;
+        <span class="hljs-keyword">if</span> (node.left != <span class="hljs-keyword">null</span> &amp;&amp; node.left.val != voyage[i]) &#123;
             ans.add(node.val);
             matchs(node.right, voyage);
             matchs(node.left, voyage);
-        &#125; else &#123;
+        &#125; <span class="hljs-keyword">else</span> &#123;
             matchs(node.left, voyage);
             matchs(node.right, voyage);
         &#125;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="30-Russian-Doll-Envelopes"><a href="#30-Russian-Doll-Envelopes" class="headerlink" title="30. Russian Doll Envelopes"></a>30. Russian Doll Envelopes</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/russian-doll-envelopes/">354. Russian Doll Envelopes</a> <code>Hard</code></p>
@@ -1214,30 +1193,29 @@ class Solution &#123;
 <p>给出一系列信封的宽高，如果一个信封的宽高均大于另一个信封，则这两个信封可以嵌套，求最多可以有多少个信封互相嵌套。（信封不可旋转）</p>
 <p><strong>题目解答：</strong></p>
 <p>动态规划：<code>dp[i]</code> 表示位置 i 为最后一个信封时的最大嵌套数量。</p>
-<pre><code class="java">class Solution &#123;
-    public int maxEnvelopes(int[][] envelopes) &#123;
-        Arrays.sort(envelopes, new Comparator&lt;int[]&gt;() &#123;
-            @Override
-            public int compare(int[] a, int[] b) &#123;
-                return a[0] == b[0] ? a[1]-b[1] : a[0]-b[0];
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">maxEnvelopes</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[][] envelopes)</span> </span>&#123;
+        Arrays.sort(envelopes, <span class="hljs-keyword">new</span> Comparator&lt;<span class="hljs-keyword">int</span>[]&gt;() &#123;
+            <span class="hljs-meta">@Override</span>
+            <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compare</span><span class="hljs-params">(<span class="hljs-keyword">int</span>[] a, <span class="hljs-keyword">int</span>[] b)</span> </span>&#123;
+                <span class="hljs-keyword">return</span> a[<span class="hljs-number">0</span>] == b[<span class="hljs-number">0</span>] ? a[<span class="hljs-number">1</span>]-b[<span class="hljs-number">1</span>] : a[<span class="hljs-number">0</span>]-b[<span class="hljs-number">0</span>];
             &#125;
         &#125;);
 
-        int ans = 1;
-        int[] dp = new int[envelopes.length];
-        Arrays.fill(dp, 1);
-        for(int i = 0; i &lt; envelopes.length; i++) &#123;
-            for(int j = 0; j &lt; i; j++) &#123;
-                if (envelopes[i][0] &gt; envelopes[j][0] &amp;&amp; envelopes[i][1] &gt; envelopes[j][1]) &#123;
-                    dp[i] = Math.max(dp[i], dp[j] + 1);
+        <span class="hljs-keyword">int</span> ans = <span class="hljs-number">1</span>;
+        <span class="hljs-keyword">int</span>[] dp = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[envelopes.length];
+        Arrays.fill(dp, <span class="hljs-number">1</span>);
+        <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; envelopes.length; i++) &#123;
+            <span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; i; j++) &#123;
+                <span class="hljs-keyword">if</span> (envelopes[i][<span class="hljs-number">0</span>] &gt; envelopes[j][<span class="hljs-number">0</span>] &amp;&amp; envelopes[i][<span class="hljs-number">1</span>] &gt; envelopes[j][<span class="hljs-number">1</span>]) &#123;
+                    dp[i] = Math.max(dp[i], dp[j] + <span class="hljs-number">1</span>);
                 &#125;
             &#125;
             ans  = Math.max(ans, dp[i]);
         &#125;
-        return ans;
+        <span class="hljs-keyword">return</span> ans;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
 <h2 id="31-Stamping-The-Sequence"><a href="#31-Stamping-The-Sequence" class="headerlink" title="31. Stamping The Sequence"></a>31. Stamping The Sequence</h2><p><a target="_blank" rel="noopener" href="https://leetcode.com/problems/stamping-the-sequence/">936. Stamping The Sequence - LeetCode</a> <code>Hard</code></p>
@@ -1251,87 +1229,106 @@ class Solution &#123;
 <li>遍历影响到的窗口范围（<code>List&lt;Node&gt; A </code>），如果这些窗口移除可以匹配任意字符的范围后，可以匹配目标字符串，则匹配成功，再次移除该印章范围，持续判断下去。</li>
 </ul>
 <p>注意本解法仅保证能得出有效解答，而不保证最优解。</p>
-<pre><code class="java">class Solution &#123;
-    public int[] movesToStamp(String stamp, String target) &#123;
-        int M = stamp.length(), N = target.length();
-        Queue&lt;Integer&gt; queue = new ArrayDeque();
-        boolean[] done = new boolean[N];
-        Stack&lt;Integer&gt; ans = new Stack();
-        List&lt;Node&gt; A = new ArrayList();
+<pre><code class="hljs java"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Solution</span> </span>&#123;
+    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span>[] movesToStamp(String stamp, String target) &#123;
+        <span class="hljs-keyword">int</span> M = stamp.length(), N = target.length();
+        Queue&lt;Integer&gt; queue = <span class="hljs-keyword">new</span> ArrayDeque();
+        <span class="hljs-keyword">boolean</span>[] done = <span class="hljs-keyword">new</span> <span class="hljs-keyword">boolean</span>[N];
+        Stack&lt;Integer&gt; ans = <span class="hljs-keyword">new</span> Stack();
+        List&lt;Node&gt; A = <span class="hljs-keyword">new</span> ArrayList();
 
-        for (int i = 0; i &lt;= N-M; ++i) &#123;
-            // For each window [i, i+M), A[i] will contain
-            // info on what needs to change before we can
-            // reverse stamp at this window.
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt;= N-M; ++i) &#123;
+            <span class="hljs-comment">// For each window [i, i+M), A[i] will contain</span>
+            <span class="hljs-comment">// info on what needs to change before we can</span>
+            <span class="hljs-comment">// reverse stamp at this window.</span>
 
-            Set&lt;Integer&gt; made = new HashSet();
-            Set&lt;Integer&gt; todo = new HashSet();
-            for (int j = 0; j &lt; M; ++j) &#123;
-                if (target.charAt(i+j) == stamp.charAt(j))
+            Set&lt;Integer&gt; made = <span class="hljs-keyword">new</span> HashSet();
+            Set&lt;Integer&gt; todo = <span class="hljs-keyword">new</span> HashSet();
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; M; ++j) &#123;
+                <span class="hljs-keyword">if</span> (target.charAt(i+j) == stamp.charAt(j))
                     made.add(i+j);
-                else
+                <span class="hljs-keyword">else</span>
                     todo.add(i+j);
             &#125;
 
-            A.add(new Node(made, todo));
+            A.add(<span class="hljs-keyword">new</span> Node(made, todo));
 
-            // If we can reverse stamp at i immediately,
-            // enqueue letters from this window.
-            if (todo.isEmpty()) &#123;
+            <span class="hljs-comment">// If we can reverse stamp at i immediately,</span>
+            <span class="hljs-comment">// enqueue letters from this window.</span>
+            <span class="hljs-keyword">if</span> (todo.isEmpty()) &#123;
                 ans.push(i);
-                for (int j = i; j &lt; i + M; ++j) if (!done[j]) &#123;
+                <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = i; j &lt; i + M; ++j) <span class="hljs-keyword">if</span> (!done[j]) &#123;
                     queue.add(j);
-                    done[j] = true;
+                    done[j] = <span class="hljs-keyword">true</span>;
                 &#125;
             &#125;
         &#125;
 
-        // For each enqueued letter (position),
-        while (!queue.isEmpty()) &#123;
-            int i = queue.poll();
+        <span class="hljs-comment">// For each enqueued letter (position),</span>
+        <span class="hljs-keyword">while</span> (!queue.isEmpty()) &#123;
+            <span class="hljs-keyword">int</span> i = queue.poll();
 
-            // For each window that is potentially affected,
-            // j: start of window
-            for (int j = Math.max(0, i-M+1); j &lt;= Math.min(N-M, i); ++j) &#123;
-                if (A.get(j).todo.contains(i)) &#123;  // This window is affected
+            <span class="hljs-comment">// For each window that is potentially affected,</span>
+            <span class="hljs-comment">// j: start of window</span>
+            <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = Math.max(<span class="hljs-number">0</span>, i-M+<span class="hljs-number">1</span>); j &lt;= Math.min(N-M, i); ++j) &#123;
+                <span class="hljs-keyword">if</span> (A.get(j).todo.contains(i)) &#123;  <span class="hljs-comment">// This window is affected</span>
                     A.get(j).todo.remove(i);
-                    if (A.get(j).todo.isEmpty()) &#123;
+                    <span class="hljs-keyword">if</span> (A.get(j).todo.isEmpty()) &#123;
                         ans.push(j);
-                        for (int m: A.get(j).made) if (!done[m]) &#123;
+                        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> m: A.get(j).made) <span class="hljs-keyword">if</span> (!done[m]) &#123;
                             queue.add(m);
-                            done[m] = true;
+                            done[m] = <span class="hljs-keyword">true</span>;
                         &#125;
                     &#125;
                 &#125;
             &#125;
         &#125;
 
-        for (boolean b: done)
-            if (!b) return new int[0];
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">boolean</span> b: done)
+            <span class="hljs-keyword">if</span> (!b) <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">0</span>];
 
-        int[] ret = new int[ans.size()];
-        int t = 0;
-        while (!ans.isEmpty())
+        <span class="hljs-keyword">int</span>[] ret = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[ans.size()];
+        <span class="hljs-keyword">int</span> t = <span class="hljs-number">0</span>;
+        <span class="hljs-keyword">while</span> (!ans.isEmpty())
             ret[t++] = ans.pop();
 
-        return ret;
+        <span class="hljs-keyword">return</span> ret;
     &#125;
 &#125;
 
-class Node &#123;
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Node</span> </span>&#123;
     Set&lt;Integer&gt; made, todo;
     Node(Set&lt;Integer&gt; m, Set&lt;Integer&gt; t) &#123;
         made = m;
         todo = t;
     &#125;
-&#125;
-</code></pre>
+&#125;</code></pre>
 <br/>
 
     </div>
 </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
 
     </div>
     
+    
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
 </body>
 </html>
