@@ -1,6 +1,16 @@
 
 $main-color : #7897C3; //#ac4142;
 
+html {
+    height:100%;
+}
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    height: 100%;
+}
+
 /** 侧边栏 **/
 .sidebar {
     position: fixed;
@@ -23,11 +33,25 @@ $main-color : #7897C3; //#ac4142;
     color: white;
 }
 
-.sidebar-sticky {
+.sidebar-title {
     position: absolute;
     right: 20px;
-    top: 30px;
+    top: 40px;
     left: 20px; 
+    text-align: center;
+}
+
+.sidebar-title h1 {
+    margin: 0;
+}
+
+.sidebar-menu {
+    position: absolute;
+    right: 20px;
+    top: 120px;
+    left: 30px; 
+    text-align: left;
+    font-size: 1rem;
 }
 
 .sidebar-footer {
@@ -42,7 +66,11 @@ $main-color : #7897C3; //#ac4142;
 }
 
 .content {
+    box-sizing: border-box;
     margin-left: 300px;
+    padding-left: 50px;
+    padding-top: 40px;
+    min-height: 100%;
 }
 
 .header {
@@ -52,10 +80,10 @@ $main-color : #7897C3; //#ac4142;
 }
 
 /** 主页范围 **/
-.posts {
-    margin-left: 50px;
-    margin-top: 50px;
-}
+// .posts {
+//     margin-left: 50px;
+//     margin-top: 50px;
+// }
 
 .post {
     margin-bottom: 15px;
@@ -92,9 +120,7 @@ a:link, a:visited  {
 }
 
 .article {
-    margin-left: 50px;
     margin-right: 350px;
-    margin-top: 50px;
 }
 
 .article {
@@ -140,3 +166,68 @@ a:link, a:visited  {
     max-width: 1200px;
 }
 
+ol.toc-child {
+    padding-inline-start: 30px;
+}
+
+.alert-warning {
+    border: 1px solid #ffd77a;
+    background-color: #fff9e6;
+}
+
+.alert-with-desc {
+    padding: 16px;
+    position: relative;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    color: #515a6e;
+    line-height: 1.5;
+    position: relative;
+    border-radius: 4px;
+    color: #515a6e;
+    font-size: 14px;
+    line-height: 16px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.alert-with-desc .alert-message {
+    font-size: 16px;
+    color: #17233d;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.alert-desc {
+    padding: 16px;
+    position: relative;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    color: #515a6e;
+    line-height: 1.5;
+}
+
+.archive-group {
+    margin-bottom: 20px;
+}
+
+.archive-year {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #5499C7;
+}
+
+.archive-post {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.archive-post .title {
+    padding-left: 20px;
+    color: $main-color;
+}
+
+.archive-post .time {
+    color: #909497
+}

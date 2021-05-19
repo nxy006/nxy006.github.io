@@ -1,0 +1,21 @@
+<% years = [] %>
+<% page.posts.each(function(post, index) { %>
+    <% if (years.indexOf(date(post.date, 'YYYY')) == -1) { %>
+        <% years.push(date(post.date, 'YYYY')) %>
+    <% } %>
+<% }); %> 
+
+<% years.forEach(function(year, index) { %>
+    <div class="archive-group">
+        <div class="archive-year"><%= year %></div>
+        <% page.posts.each(function(post, index) { %>
+            <% if (year == date(post.date, 'YYYY')) { %>
+                <div class="archive-post">
+                    <div class="time"><%- date(post.date) %></div>
+                    <div class="title"><a href="<%- url_for(post.path) %>"><%= post.title %></a></div>
+                </div>
+            <% } %>
+        <% }); %>
+    </div>
+<% }); %>
+

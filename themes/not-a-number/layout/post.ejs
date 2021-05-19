@@ -6,7 +6,30 @@
     <div class="article-toc">
         <%- toc(page.content, {list_number: false}) %>
     </div>
+    <% if (page.draft) { %>
+        <%- partial('_partial/components/alert', {
+            type: 'warning',
+            title: '本文还处于 <b>草稿</b> 状态',
+            desc: '草稿状态的文章尚未完成，可能有尚未核实或补充的内容，其内容的准确性无法保证'})
+        %>
+    <% } %>
     <div class="article-content markdown-body">
         <%- page.content %>
     </div>
 </div>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+    });
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="<%- theme.mathjax.cdn %>"></script>
